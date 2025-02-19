@@ -1,0 +1,58 @@
+{
+    "data": {
+        "viewer": {
+            "repositories": {
+                "nodes": [
+                    {
+                        "name": "Proyecto-Entregable-Pyhton-1",
+                        "description": null,
+                        "createdAt": "2021-10-21T11:24:00Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "01_pruebadeholamundo-SergioKenz0",
+                        "description": "01_pruebadeholamundo-SergioKenz0 created by GitHub Classroom",
+                        "createdAt": "2021-10-21T13:52:24Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "02_proyecto_primer_cuatrimestre-SergioKenz0",
+                        "description": "02_proyecto_primer_cuatrimestre-SergioKenz0 created by GitHub Classroom",
+                        "createdAt": "2021-10-21T14:48:37Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "03_proyectoti41_segundocuatrimestre-SergioKenz0",
+                        "description": "03_proyectoti41_segundocuatrimestre-SergioKenz0 created by GitHub Classroom",
+                        "createdAt": "2022-03-15T16:41:06Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "Haskell-Ecosistem-Simulation",
+                        "description": null,
+                        "createdAt": "2024-01-06T17:05:42Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "SOS2324-15-sandbox",
+                        "description": null,
+                        "createdAt": "2024-02-05T12:12:42Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "SOS2324-15",
+                        "description": null,
+                        "createdAt": "2024-02-05T12:37:08Z",
+                        "stargazerCount": 0
+                    },
+                    {
+                        "name": "ProyectosSSII",
+                        "description": null,
+                        "createdAt": "2024-09-30T15:48:01Z",
+                        "stargazerCount": 0
+                    }
+                ]
+            }
+        }
+    }
+}
