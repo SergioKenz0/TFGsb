@@ -1,0 +1,28 @@
+{
+    "name": "pirateweather",
+    "createdAt": "2022-01-05T14:54:17Z",
+    "stargazerCount": 694,
+    "forkCount": 29,
+    "issues": {
+        "totalCount": 211
+    },
+    "closedIssues": {
+        "totalCount": 189
+    },
+    "defaultBranchRef": {
+        "target": {
+            "history": {
+                "edges": [
+                    {
+                        "node": {
+                            "committedDate": "2025-02-26T20:10:11Z"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "owner_type": "Organization",
+    "owner_location": "Canada",
+    "first_commit_date": "2025-02-26T20:10:11Z"
+}

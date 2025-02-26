@@ -1,0 +1,28 @@
+{
+    "name": "Hello-World",
+    "createdAt": "2011-01-26T19:01:12Z",
+    "stargazerCount": 2858,
+    "forkCount": 2690,
+    "issues": {
+        "totalCount": 2266
+    },
+    "closedIssues": {
+        "totalCount": 1265
+    },
+    "defaultBranchRef": {
+        "target": {
+            "history": {
+                "edges": [
+                    {
+                        "node": {
+                            "committedDate": "2012-03-06T23:06:50Z"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "owner_type": "User",
+    "owner_location": "San Francisco",
+    "first_commit_date": "2012-03-06T23:06:50Z"
+}
