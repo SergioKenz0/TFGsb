@@ -3,41 +3,116 @@ import json
 import sys
 import os
 from urllib.parse import urlparse
+from datetime import datetime, timedelta
+from collections import defaultdict
 
-# Configuración inicial
+# === CONFIG ===
 GITHUB_API_URL = "https://api.github.com/graphql"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 if not GITHUB_TOKEN:
-    print(" Error: No se encontró el token de GitHub en las variables de entorno.")
+    print("❌ No se encontró el token de GitHub en las variables de entorno.")
     sys.exit(1)
 
-# Encabezados de autenticación
 HEADERS = {
     "Authorization": f"Bearer {GITHUB_TOKEN}"
 }
 
-# Función para extraer owner y repo_name de la URL
+# === FUNCIONES UTILITARIAS ===
+
 def obtener_owner_repo(url):
     parsed_url = urlparse(url)
-    path_parts = parsed_url.path.strip('/').split('/')
-    if len(path_parts) == 2:
-        return path_parts[0], path_parts[1]  # owner, repo_name
-    else:
-        raise ValueError("La URL proporcionada no es válida.")
+    parts = parsed_url.path.strip("/").split("/")
+    if len(parts) == 2:
+        return parts[0], parts[1]
+    raise ValueError("URL de repositorio no válida")
 
 def ejecutar_consulta(query):
-    response = requests.post(
-        GITHUB_API_URL,
-        json={'query': query},
-        headers=HEADERS
-    )
+    response = requests.post(GITHUB_API_URL, json={"query": query}, headers=HEADERS)
     if response.status_code == 200:
         return response.json()
     else:
-        raise Exception(f"Query fallida: {response.status_code}, {response.text}")
+        raise Exception(f"Query fallida: {response.status_code} - {response.text}")
 
-# Función para obtener datos adicionales del propietario
+def calcular_dias(fecha1, fecha2):
+    try:
+        f1 = datetime.fromisoformat(fecha1.replace("Z", "+00:00"))
+        f2 = datetime.fromisoformat(fecha2.replace("Z", "+00:00"))
+        return (f2 - f1).days
+    except:
+        return "N/A"
+
+# === ANÁLISIS DE COMMIT Y ACTIVIDAD ===
+
+def obtener_commits(owner, repo):
+    query = f"""
+    {{
+      repository(owner: "{owner}", name: "{repo}") {{
+        defaultBranchRef {{
+          target {{
+            ... on Commit {{
+              history(first: 100) {{
+                edges {{
+                  node {{
+                    committedDate
+                    author {{
+                      user {{
+                        login
+                      }}
+                    }}
+                  }}
+                }}
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    """
+    data = ejecutar_consulta(query)
+    edges = data["data"]["repository"]["defaultBranchRef"]["target"]["history"]["edges"]
+    if not edges:
+        return {
+            "first_commit": "Fecha no disponible",
+            "last_commit": "Fecha no disponible",
+            "contributors": [],
+            "commit_activity": [],
+            "active_contributors": 0,
+            "active_lifespan_days": "N/A"
+        }
+
+    commits = [e["node"] for e in edges]
+    first_commit = commits[-1]["committedDate"]
+    last_commit = commits[0]["committedDate"]
+
+    contrib_dict = defaultdict(int)
+    commit_week = defaultdict(int)
+    for c in commits:
+        login = c["author"]["user"]["login"] if c["author"]["user"] else "Anónimo"
+        contrib_dict[login] += 1
+        fecha = datetime.fromisoformat(c["committedDate"].replace("Z", "+00:00"))
+        semana = fecha - timedelta(days=fecha.weekday())
+        commit_week[semana.strftime("%Y-%m-%d")] += 1
+
+    total_commits = sum(contrib_dict.values())
+    contributors = [{"login": k, "commits": v} for k, v in sorted(contrib_dict.items(), key=lambda x: -x[1])]
+    active_contributors = [c for c in contributors if c["commits"] >= total_commits * 0.1]
+    activity = [{"week": w, "count": c} for w, c in sorted(commit_week.items())]
+
+    if activity:
+        active_lifespan_days = calcular_dias(activity[0]["week"] + "T00:00:00Z", activity[-1]["week"] + "T00:00:00Z")
+    else:
+        active_lifespan_days = "N/A"
+
+    return {
+        "first_commit": first_commit,
+        "last_commit": last_commit,
+        "contributors": contributors,
+        "active_contributors": len(active_contributors),
+        "commit_activity": activity,
+        "active_lifespan_days": active_lifespan_days
+    }
+
 def obtener_datos_propietario(owner):
     query = f"""
     {{
@@ -52,95 +127,121 @@ def obtener_datos_propietario(owner):
     }}
     """
     data = ejecutar_consulta(query)
-    
     if data["data"]["user"]:
-        owner_type = data["data"]["user"]["__typename"]
-        location = data["data"]["user"].get("location", "Ubicación no disponible")
+        return data["data"]["user"]["__typename"], data["data"]["user"].get("location", "Ubicación no disponible")
     elif data["data"]["organization"]:
-        owner_type = data["data"]["organization"]["__typename"]
-        location = data["data"]["organization"].get("location", "Ubicación no disponible")
+        return data["data"]["organization"]["__typename"], data["data"]["organization"].get("location", "Ubicación no disponible")
     else:
-        owner_type = "Desconocido"
-        location = "Ubicación no disponible"
-    
-    return owner_type, location
+        return "Desconocido", "Ubicación no disponible"
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(" Error: Debes proporcionar la URL del repositorio como argumento.")
-        sys.exit(1)
-
-    url_repo = sys.argv[1]  # Se obtiene la URL del primer argumento
-
-    try:
-        # Obtener owner y repo_name de la URL
-        owner, repo_name = obtener_owner_repo(url_repo)
-
-        # Consulta GraphQL para obtener datos del repositorio
-        QUERY = f"""
-        {{
-          repository(owner: "{owner}", name: "{repo_name}") {{
-            name
-            createdAt
-            stargazerCount
-            forkCount
-            issues {{
-              totalCount
-            }}
-            closedIssues: issues(states: CLOSED) {{
-              totalCount
-            }}
-            defaultBranchRef {{
-              target {{
-                ... on Commit {{
-                  history(first: 1) {{
-                    edges {{
-                      node {{
-                        committedDate
-                      }}
-                    }}
-                  }}
-                }}
-              }}
-            }}
+def analizar_repo(owner, repo):
+    commit_info = obtener_commits(owner, repo)
+    query = f"""
+    {{
+      repository(owner: "{owner}", name: "{repo}") {{
+        name
+        url
+        createdAt
+        stargazerCount
+        forkCount
+        watchers {{ totalCount }}
+        diskUsage
+        issues {{ totalCount }}
+        closedIssues: issues(states: CLOSED) {{ totalCount }}
+        pullRequests {{ totalCount }}
+        languages(first: 5, orderBy: {{field: SIZE, direction: DESC}}) {{
+          edges {{
+            size
+            node {{ name }}
           }}
         }}
-        """
+        licenseInfo {{ name }}
+        object(expression: "HEAD:README.md") {{ ... on Blob {{ text }} }}
+        owner {{ login }}
+      }}
+    }}
+    """
+    data = ejecutar_consulta(query)
+    repo_data = data["data"]["repository"]
+    owner_type, owner_location = obtener_datos_propietario(owner)
 
-        # Ejecutar la consulta y extraer los datos
-        data = ejecutar_consulta(QUERY)
-        repo_data = data["data"]["repository"]
+    total_lang = sum(l["size"] for l in repo_data["languages"]["edges"])
+    lang_breakdown = [
+        {"name": l["node"]["name"], "percentage": round((l["size"] / total_lang) * 100, 2)}
+        for l in repo_data["languages"]["edges"]
+    ] if total_lang > 0 else []
 
-        # Obtener el tipo de propietario y ubicación
-        owner_type, owner_location = obtener_datos_propietario(owner)
-        repo_data["owner_type"] = owner_type  # Agregar tipo de propietario al JSON
-        repo_data["owner_location"] = owner_location  # Agregar ubicación al JSON
+    return {
+        "repo": {
+            "name": repo_data["name"],
+            "owner": owner,
+            "url": repo_data["url"],
+            "owner_type": owner_type,
+            "owner_location": owner_location,
+            "created_at": repo_data["createdAt"],
+            "first_commit": commit_info["first_commit"],
+            "last_commit": commit_info["last_commit"]
+        },
+        "metrics": {
+            "stars": repo_data["stargazerCount"],
+            "forks": repo_data["forkCount"],
+            "watchers": repo_data["watchers"]["totalCount"],
+            "disk_usage_kb": repo_data["diskUsage"],
+            "open_issues": repo_data["issues"]["totalCount"],
+            "closed_issues": repo_data["closedIssues"]["totalCount"],
+            "branches": "N/A",
+            "pull_requests": {
+                "total": repo_data["pullRequests"]["totalCount"],
+                "open": "N/A",
+                "closed": "N/A"
+            },
+            "contributors": {
+                "total": len(commit_info["contributors"]),
+                "active": commit_info["active_contributors"],
+                "by_commit": commit_info["contributors"]
+            }
+        },
+        "activity": {
+            "lifespan_days": calcular_dias(repo_data["createdAt"], commit_info["last_commit"]),
+            "inactive_for_days": calcular_dias(commit_info["last_commit"], datetime.utcnow().isoformat()),
+            "commit_activity": commit_info["commit_activity"],
+            "active_lifespan_days": commit_info["active_lifespan_days"]
+        },
+        "languages": {
+            "main": lang_breakdown[0]["name"] if lang_breakdown else "Desconocido",
+            "breakdown": lang_breakdown
+        },
+        "license": repo_data["licenseInfo"]["name"] if repo_data["licenseInfo"] else "Sin licencia",
+        "best_practices": {
+            "readme": repo_data["object"] is not None,
+            "license": repo_data["licenseInfo"] is not None,
+            "contributing": False,
+            "code_of_conduct": False,
+            "issue_templates": False,
+            "pull_request_template": False
+        }
+    }
 
-        # Obtener fecha del primer commit
-        first_commit_date = repo_data["defaultBranchRef"]["target"]["history"]["edges"][0]["node"]["committedDate"]
-        repo_data["first_commit_date"] = first_commit_date
+# === EJECUCIÓN PRINCIPAL ===
 
-        # Mostrar los datos extraídos
-        print(f"Repositorio: {repo_data['name']}")
-        print(f"Año de creación: {repo_data['createdAt'].split('-')[0]}")
-        print(f"Fecha del primer commit: {repo_data['first_commit_date']}")
-        print(f"Estrellas: {repo_data['stargazerCount']}")
-        print(f"Forks: {repo_data['forkCount']}")
-        print(f"Issues abiertas: {repo_data['issues']['totalCount']}")
-        print(f"Issues cerradas: {repo_data['closedIssues']['totalCount']}")
-        print(f"Tipo de propietario: {repo_data['owner_type']}")
-        print(f"Ubicación del propietario: {repo_data['owner_location']}")
+if __name__ == "__main__":
+    urls = sys.argv[1:-1]
+    output_file = sys.argv[-1]
 
-        # Guardar los datos en un archivo JSON
-        json_filename = f"repositorio_{repo_data['name']}.json"
-        with open(json_filename, "w") as archivo_json:
-            json.dump(repo_data, archivo_json, indent=4)
-
-        print(f" Datos guardados en {json_filename}")
-
-    except ValueError as ve:
-        print(f" Error en la URL: {ve}")
+    if not urls:
+        print("❌ Debes proporcionar al menos una URL.")
         sys.exit(1)
-    except Exception as e:
-        print(f" Error en la consulta: {e}")
-        sys.exit(1)
+
+    results = []
+    for url in urls:
+        try:
+            owner, repo = obtener_owner_repo(url)
+            print(f"🔍 Analizando: {owner}/{repo}")
+            results.append(analizar_repo(owner, repo))
+        except Exception as e:
+            print(f"❌ Error con {url}: {e}")
+
+    with open(output_file, "w") as f:
+        json.dump(results, f, indent=2)
+
+    print(f"✅ Reporte guardado en {output_file}")

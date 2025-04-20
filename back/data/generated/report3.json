@@ -1,0 +1,368 @@
+[
+  {
+    "repo": {
+      "name": "HowToCook",
+      "owner": "Anduin2017",
+      "url": "https://github.com/Anduin2017/HowToCook",
+      "owner_type": "User",
+      "owner_location": "Suzhou, Jiangsu, China",
+      "created_at": "2020-02-29T10:43:49Z",
+      "first_commit": "2025-01-18T12:04:28Z",
+      "last_commit": "2025-04-20T14:36:41Z"
+    },
+    "metrics": {
+      "stars": 78436,
+      "forks": 9463,
+      "watchers": 426,
+      "disk_usage_kb": 520040,
+      "open_issues": 733,
+      "closed_issues": 321,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 760,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 26,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "github-actions[bot]",
+            "commits": 35
+          },
+          {
+            "login": "Anduin2017",
+            "commits": 31
+          },
+          {
+            "login": "TheLittleStone-OvO",
+            "commits": 3
+          },
+          {
+            "login": "chenfy840",
+            "commits": 3
+          },
+          {
+            "login": "phyang-zero",
+            "commits": 3
+          },
+          {
+            "login": "little106",
+            "commits": 3
+          },
+          {
+            "login": "jhonroxton",
+            "commits": 2
+          },
+          {
+            "login": "NomotoK",
+            "commits": 2
+          },
+          {
+            "login": "uanemui",
+            "commits": 1
+          },
+          {
+            "login": "OrcaMin",
+            "commits": 1
+          },
+          {
+            "login": "yusancky",
+            "commits": 1
+          },
+          {
+            "login": "cyh-2003",
+            "commits": 1
+          },
+          {
+            "login": "cardze",
+            "commits": 1
+          },
+          {
+            "login": "azzliang6",
+            "commits": 1
+          },
+          {
+            "login": "JustinTong0323",
+            "commits": 1
+          },
+          {
+            "login": "HosisoraLing",
+            "commits": 1
+          },
+          {
+            "login": "Moitr",
+            "commits": 1
+          },
+          {
+            "login": "iam-xiaogang",
+            "commits": 1
+          },
+          {
+            "login": "ShaoChenHeng",
+            "commits": 1
+          },
+          {
+            "login": "Kevin-O-Hsu",
+            "commits": 1
+          },
+          {
+            "login": "7sDream",
+            "commits": 1
+          },
+          {
+            "login": "JCYTopWorld",
+            "commits": 1
+          },
+          {
+            "login": "deventw",
+            "commits": 1
+          },
+          {
+            "login": "Sywyar",
+            "commits": 1
+          },
+          {
+            "login": "zhangfangbiao",
+            "commits": 1
+          },
+          {
+            "login": "Moemu",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 1877,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-01-13",
+          "count": 11
+        },
+        {
+          "week": "2025-01-20",
+          "count": 2
+        },
+        {
+          "week": "2025-02-03",
+          "count": 1
+        },
+        {
+          "week": "2025-02-10",
+          "count": 2
+        },
+        {
+          "week": "2025-02-17",
+          "count": 4
+        },
+        {
+          "week": "2025-03-10",
+          "count": 2
+        },
+        {
+          "week": "2025-03-17",
+          "count": 2
+        },
+        {
+          "week": "2025-03-24",
+          "count": 4
+        },
+        {
+          "week": "2025-03-31",
+          "count": 1
+        },
+        {
+          "week": "2025-04-07",
+          "count": 1
+        },
+        {
+          "week": "2025-04-14",
+          "count": 70
+        }
+      ],
+      "active_lifespan_days": 91
+    },
+    "languages": {
+      "main": "Dockerfile",
+      "breakdown": [
+        {
+          "name": "Dockerfile",
+          "percentage": 100.0
+        }
+      ]
+    },
+    "license": "The Unlicense",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "developer-roadmap",
+      "owner": "kamranahmedse",
+      "url": "https://github.com/kamranahmedse/developer-roadmap",
+      "owner_type": "User",
+      "owner_location": "United Kingdom",
+      "created_at": "2017-03-15T13:45:52Z",
+      "first_commit": "2025-04-03T14:48:07Z",
+      "last_commit": "2025-04-20T17:12:57Z"
+    },
+    "metrics": {
+      "stars": 314315,
+      "forks": 40864,
+      "watchers": 6812,
+      "disk_usage_kb": 256459,
+      "open_issues": 2753,
+      "closed_issues": 2562,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 5052,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 19,
+        "active": 1,
+        "by_commit": [
+          {
+            "login": "kamranahmedse",
+            "commits": 69
+          },
+          {
+            "login": "offensive-vk",
+            "commits": 4
+          },
+          {
+            "login": "github-actions[bot]",
+            "commits": 4
+          },
+          {
+            "login": "BryanWV",
+            "commits": 3
+          },
+          {
+            "login": "uinstinct",
+            "commits": 3
+          },
+          {
+            "login": "arikchakma",
+            "commits": 3
+          },
+          {
+            "login": "web-svb",
+            "commits": 2
+          },
+          {
+            "login": "satyaakam",
+            "commits": 1
+          },
+          {
+            "login": "11xnt",
+            "commits": 1
+          },
+          {
+            "login": "28arnab",
+            "commits": 1
+          },
+          {
+            "login": "amirbabaei97",
+            "commits": 1
+          },
+          {
+            "login": "Silicon27",
+            "commits": 1
+          },
+          {
+            "login": "FrankFromSmartMan",
+            "commits": 1
+          },
+          {
+            "login": "SepandJP",
+            "commits": 1
+          },
+          {
+            "login": "sukalaper",
+            "commits": 1
+          },
+          {
+            "login": "jjyeo",
+            "commits": 1
+          },
+          {
+            "login": "Mumtozbekov",
+            "commits": 1
+          },
+          {
+            "login": "pavankumarbalijepalli",
+            "commits": 1
+          },
+          {
+            "login": "kalvin-chakma",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 2958,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-03-31",
+          "count": 36
+        },
+        {
+          "week": "2025-04-07",
+          "count": 33
+        },
+        {
+          "week": "2025-04-14",
+          "count": 31
+        }
+      ],
+      "active_lifespan_days": 14
+    },
+    "languages": {
+      "main": "TypeScript",
+      "breakdown": [
+        {
+          "name": "TypeScript",
+          "percentage": 78.48
+        },
+        {
+          "name": "Astro",
+          "percentage": 16.74
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 3.83
+        },
+        {
+          "name": "CSS",
+          "percentage": 0.7
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.25
+        }
+      ]
+    },
+    "license": "Other",
+    "best_practices": {
+      "readme": false,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  }
+]
