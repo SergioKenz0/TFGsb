@@ -1,13 +1,13 @@
-// src/pages/AnalyzePage.jsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const AnalyzePage = () => {
   const { id } = useParams();
   const [report, setReport] = useState(null);
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch("http://localhost:5000/reports")
+    fetch(`${API_BASE_URL}/reports`)
       .then((res) => res.json())
       .then((data) => setReport(data[parseInt(id) - 1]))
       .catch((err) => console.error("❌ Error al cargar reporte:", err));

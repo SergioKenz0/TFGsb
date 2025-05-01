@@ -7,6 +7,7 @@ const CreateReportPage = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (index, value) => {
     const newUrls = [...urls];
@@ -42,7 +43,7 @@ const CreateReportPage = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch("http://localhost:5000/analyze", {
+      const response = await fetch(`${API_BASE_URL}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ repo_urls: validUrls }),

@@ -1,4 +1,3 @@
-// src/components/Dashboard.jsx
 import { useEffect, useState } from "react";
 import ReportCard from "./ReportCard";
 import "../assets/styles/components/_dashboard.scss";
@@ -6,9 +5,10 @@ import "../assets/styles/components/_dashboard.scss";
 const Dashboard = () => {
   const [reports, setReports] = useState([]);
   const [error, setError] = useState(null);
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch("http://localhost:5000/reports")
+    fetch(`${API_BASE_URL}/reports`)
       .then((res) => res.json())
       .then((data) => {
         if (!Array.isArray(data)) {
