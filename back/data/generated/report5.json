@@ -1,0 +1,1167 @@
+[
+  {
+    "repo": {
+      "name": "ai-engineering-hub",
+      "owner": "patchy631",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "owner_type": "User",
+      "owner_location": null,
+      "created_at": "2024-10-21T10:43:24Z",
+      "first_commit": "2025-01-30T13:43:35Z",
+      "last_commit": "2025-04-30T06:55:51Z"
+    },
+    "metrics": {
+      "stars": 8602,
+      "forks": 1458,
+      "watchers": 122,
+      "disk_usage_kb": 179138,
+      "open_issues": 21,
+      "closed_issues": 4,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 97,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 6,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "patchy631",
+            "commits": 74
+          },
+          {
+            "login": "ChawlaAvi",
+            "commits": 18
+          },
+          {
+            "login": "gmacario",
+            "commits": 4
+          },
+          {
+            "login": "DarkRaiderCB",
+            "commits": 2
+          },
+          {
+            "login": "sitamgithub-MSIT",
+            "commits": 1
+          },
+          {
+            "login": "chojuninengu",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 190,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-01-27",
+          "count": 1
+        },
+        {
+          "week": "2025-02-03",
+          "count": 6
+        },
+        {
+          "week": "2025-02-10",
+          "count": 16
+        },
+        {
+          "week": "2025-02-17",
+          "count": 1
+        },
+        {
+          "week": "2025-02-24",
+          "count": 7
+        },
+        {
+          "week": "2025-03-03",
+          "count": 13
+        },
+        {
+          "week": "2025-03-10",
+          "count": 10
+        },
+        {
+          "week": "2025-03-17",
+          "count": 14
+        },
+        {
+          "week": "2025-03-24",
+          "count": 4
+        },
+        {
+          "week": "2025-03-31",
+          "count": 7
+        },
+        {
+          "week": "2025-04-07",
+          "count": 9
+        },
+        {
+          "week": "2025-04-21",
+          "count": 7
+        },
+        {
+          "week": "2025-04-28",
+          "count": 5
+        }
+      ],
+      "active_lifespan_days": 91
+    },
+    "languages": {
+      "main": "Jupyter Notebook",
+      "breakdown": [
+        {
+          "name": "Jupyter Notebook",
+          "percentage": 98.18
+        },
+        {
+          "name": "Python",
+          "percentage": 1.82
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "mlx-swift-examples",
+      "owner": "ml-explore",
+      "url": "https://github.com/ml-explore/mlx-swift-examples",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2024-02-22T17:47:37Z",
+      "first_commit": "2024-05-20T15:12:26Z",
+      "last_commit": "2025-04-30T16:26:27Z"
+    },
+    "metrics": {
+      "stars": 1714,
+      "forks": 213,
+      "watchers": 27,
+      "disk_usage_kb": 543,
+      "open_issues": 133,
+      "closed_issues": 99,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 159,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 29,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "davidkoski",
+            "commits": 34
+          },
+          {
+            "login": "DePasqualeOrg",
+            "commits": 23
+          },
+          {
+            "login": "johnmai-dev",
+            "commits": 5
+          },
+          {
+            "login": "ibrahimcetin",
+            "commits": 5
+          },
+          {
+            "login": "Alessan-git",
+            "commits": 4
+          },
+          {
+            "login": "awni",
+            "commits": 3
+          },
+          {
+            "login": "nwh",
+            "commits": 2
+          },
+          {
+            "login": "ronaldmannak",
+            "commits": 2
+          },
+          {
+            "login": "An\u00f3nimo",
+            "commits": 2
+          },
+          {
+            "login": "smdesai",
+            "commits": 1
+          },
+          {
+            "login": "gtokman",
+            "commits": 1
+          },
+          {
+            "login": "WesleyBatista",
+            "commits": 1
+          },
+          {
+            "login": "cyrilzakka",
+            "commits": 1
+          },
+          {
+            "login": "toffaletti",
+            "commits": 1
+          },
+          {
+            "login": "ynagatomo",
+            "commits": 1
+          },
+          {
+            "login": "nvnsho",
+            "commits": 1
+          },
+          {
+            "login": "tzxdtc",
+            "commits": 1
+          },
+          {
+            "login": "hasnat",
+            "commits": 1
+          },
+          {
+            "login": "pcuenca",
+            "commits": 1
+          },
+          {
+            "login": "JCSooHwanCho",
+            "commits": 1
+          },
+          {
+            "login": "rudrankriyam",
+            "commits": 1
+          },
+          {
+            "login": "louen",
+            "commits": 1
+          },
+          {
+            "login": "shuhongwu",
+            "commits": 1
+          },
+          {
+            "login": "finnvoor",
+            "commits": 1
+          },
+          {
+            "login": "LiYanan2004",
+            "commits": 1
+          },
+          {
+            "login": "anishbasu",
+            "commits": 1
+          },
+          {
+            "login": "nanguoyu",
+            "commits": 1
+          },
+          {
+            "login": "jsmp",
+            "commits": 1
+          },
+          {
+            "login": "rounak",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 432,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-05-20",
+          "count": 1
+        },
+        {
+          "week": "2024-05-27",
+          "count": 2
+        },
+        {
+          "week": "2024-06-10",
+          "count": 1
+        },
+        {
+          "week": "2024-06-24",
+          "count": 1
+        },
+        {
+          "week": "2024-07-01",
+          "count": 2
+        },
+        {
+          "week": "2024-07-22",
+          "count": 3
+        },
+        {
+          "week": "2024-07-29",
+          "count": 3
+        },
+        {
+          "week": "2024-08-12",
+          "count": 1
+        },
+        {
+          "week": "2024-08-26",
+          "count": 5
+        },
+        {
+          "week": "2024-09-02",
+          "count": 1
+        },
+        {
+          "week": "2024-09-09",
+          "count": 5
+        },
+        {
+          "week": "2024-09-23",
+          "count": 3
+        },
+        {
+          "week": "2024-09-30",
+          "count": 4
+        },
+        {
+          "week": "2024-10-14",
+          "count": 1
+        },
+        {
+          "week": "2024-10-21",
+          "count": 2
+        },
+        {
+          "week": "2024-10-28",
+          "count": 2
+        },
+        {
+          "week": "2024-11-04",
+          "count": 1
+        },
+        {
+          "week": "2024-11-18",
+          "count": 3
+        },
+        {
+          "week": "2024-12-02",
+          "count": 2
+        },
+        {
+          "week": "2024-12-09",
+          "count": 2
+        },
+        {
+          "week": "2024-12-16",
+          "count": 5
+        },
+        {
+          "week": "2024-12-23",
+          "count": 1
+        },
+        {
+          "week": "2025-01-06",
+          "count": 1
+        },
+        {
+          "week": "2025-01-27",
+          "count": 6
+        },
+        {
+          "week": "2025-02-03",
+          "count": 2
+        },
+        {
+          "week": "2025-02-10",
+          "count": 2
+        },
+        {
+          "week": "2025-02-24",
+          "count": 3
+        },
+        {
+          "week": "2025-03-03",
+          "count": 2
+        },
+        {
+          "week": "2025-03-10",
+          "count": 7
+        },
+        {
+          "week": "2025-03-17",
+          "count": 1
+        },
+        {
+          "week": "2025-03-24",
+          "count": 4
+        },
+        {
+          "week": "2025-03-31",
+          "count": 1
+        },
+        {
+          "week": "2025-04-07",
+          "count": 5
+        },
+        {
+          "week": "2025-04-14",
+          "count": 7
+        },
+        {
+          "week": "2025-04-21",
+          "count": 1
+        },
+        {
+          "week": "2025-04-28",
+          "count": 7
+        }
+      ],
+      "active_lifespan_days": 343
+    },
+    "languages": {
+      "main": "Swift",
+      "breakdown": [
+        {
+          "name": "Swift",
+          "percentage": 99.35
+        },
+        {
+          "name": "Python",
+          "percentage": 0.51
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.14
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "automq",
+      "owner": "AutoMQ",
+      "url": "https://github.com/AutoMQ/automq",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2023-08-17T07:50:13Z",
+      "first_commit": "2024-12-25T01:57:30Z",
+      "last_commit": "2025-04-30T08:06:13Z"
+    },
+    "metrics": {
+      "stars": 5964,
+      "forks": 400,
+      "watchers": 48,
+      "disk_usage_kb": 163723,
+      "open_issues": 521,
+      "closed_issues": 462,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 1940,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 24,
+        "active": 4,
+        "by_commit": [
+          {
+            "login": "superhx",
+            "commits": 25
+          },
+          {
+            "login": "Chillax-0v0",
+            "commits": 24
+          },
+          {
+            "login": "daniel-y",
+            "commits": 14
+          },
+          {
+            "login": "SCNieh",
+            "commits": 12
+          },
+          {
+            "login": "vintagewang",
+            "commits": 3
+          },
+          {
+            "login": "shawngao-org",
+            "commits": 2
+          },
+          {
+            "login": "TwoOnefour",
+            "commits": 2
+          },
+          {
+            "login": "Gallopm",
+            "commits": 2
+          },
+          {
+            "login": "regnROK",
+            "commits": 1
+          },
+          {
+            "login": "sanks011",
+            "commits": 1
+          },
+          {
+            "login": "tijko",
+            "commits": 1
+          },
+          {
+            "login": "woshigaopp",
+            "commits": 1
+          },
+          {
+            "login": "LeedY1232",
+            "commits": 1
+          },
+          {
+            "login": "carrot729",
+            "commits": 1
+          },
+          {
+            "login": "aiivar",
+            "commits": 1
+          },
+          {
+            "login": "lingting",
+            "commits": 1
+          },
+          {
+            "login": "zongzewu23",
+            "commits": 1
+          },
+          {
+            "login": "misi0202",
+            "commits": 1
+          },
+          {
+            "login": "ciimina",
+            "commits": 1
+          },
+          {
+            "login": "super-213",
+            "commits": 1
+          },
+          {
+            "login": "wangyantong2000",
+            "commits": 1
+          },
+          {
+            "login": "KaimingWan",
+            "commits": 1
+          },
+          {
+            "login": "lyzs90",
+            "commits": 1
+          },
+          {
+            "login": "zhonghou3",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 622,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-12-23",
+          "count": 4
+        },
+        {
+          "week": "2024-12-30",
+          "count": 3
+        },
+        {
+          "week": "2025-01-06",
+          "count": 5
+        },
+        {
+          "week": "2025-01-13",
+          "count": 1
+        },
+        {
+          "week": "2025-01-20",
+          "count": 3
+        },
+        {
+          "week": "2025-02-03",
+          "count": 5
+        },
+        {
+          "week": "2025-02-10",
+          "count": 7
+        },
+        {
+          "week": "2025-02-17",
+          "count": 9
+        },
+        {
+          "week": "2025-02-24",
+          "count": 2
+        },
+        {
+          "week": "2025-03-03",
+          "count": 1
+        },
+        {
+          "week": "2025-03-10",
+          "count": 9
+        },
+        {
+          "week": "2025-03-17",
+          "count": 5
+        },
+        {
+          "week": "2025-03-24",
+          "count": 7
+        },
+        {
+          "week": "2025-03-31",
+          "count": 2
+        },
+        {
+          "week": "2025-04-07",
+          "count": 8
+        },
+        {
+          "week": "2025-04-14",
+          "count": 11
+        },
+        {
+          "week": "2025-04-21",
+          "count": 5
+        },
+        {
+          "week": "2025-04-28",
+          "count": 13
+        }
+      ],
+      "active_lifespan_days": 126
+    },
+    "languages": {
+      "main": "Java",
+      "breakdown": [
+        {
+          "name": "Java",
+          "percentage": 80.89
+        },
+        {
+          "name": "Scala",
+          "percentage": 16.71
+        },
+        {
+          "name": "Python",
+          "percentage": 2.1
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.24
+        },
+        {
+          "name": "Roff",
+          "percentage": 0.06
+        }
+      ]
+    },
+    "license": "Apache License 2.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "bitcoin",
+      "owner": "bitcoin",
+      "url": "https://github.com/bitcoin/bitcoin",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2010-12-19T15:16:43Z",
+      "first_commit": "2025-04-17T10:34:36Z",
+      "last_commit": "2025-04-30T17:56:14Z"
+    },
+    "metrics": {
+      "stars": 83171,
+      "forks": 37138,
+      "watchers": 4034,
+      "disk_usage_kb": 280698,
+      "open_issues": 8534,
+      "closed_issues": 8107,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 22282,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 18,
+        "active": 4,
+        "by_commit": [
+          {
+            "login": "achow101",
+            "commits": 35
+          },
+          {
+            "login": "fanquake",
+            "commits": 15
+          },
+          {
+            "login": "An\u00f3nimo",
+            "commits": 13
+          },
+          {
+            "login": "hebasto",
+            "commits": 12
+          },
+          {
+            "login": "l0rinc",
+            "commits": 7
+          },
+          {
+            "login": "glozow",
+            "commits": 5
+          },
+          {
+            "login": "ajtowns",
+            "commits": 2
+          },
+          {
+            "login": "luke-jr",
+            "commits": 1
+          },
+          {
+            "login": "monlovesmango",
+            "commits": 1
+          },
+          {
+            "login": "davidgumberg",
+            "commits": 1
+          },
+          {
+            "login": "vasild",
+            "commits": 1
+          },
+          {
+            "login": "furszy",
+            "commits": 1
+          },
+          {
+            "login": "VolodymyrBg",
+            "commits": 1
+          },
+          {
+            "login": "laanwj",
+            "commits": 1
+          },
+          {
+            "login": "ryanofsky",
+            "commits": 1
+          },
+          {
+            "login": "EthanHeilman",
+            "commits": 1
+          },
+          {
+            "login": "sipa",
+            "commits": 1
+          },
+          {
+            "login": "TheCharlatan",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 5246,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-14",
+          "count": 17
+        },
+        {
+          "week": "2025-04-21",
+          "count": 55
+        },
+        {
+          "week": "2025-04-28",
+          "count": 28
+        }
+      ],
+      "active_lifespan_days": 14
+    },
+    "languages": {
+      "main": "C++",
+      "breakdown": [
+        {
+          "name": "C++",
+          "percentage": 66.83
+        },
+        {
+          "name": "Python",
+          "percentage": 19.35
+        },
+        {
+          "name": "C",
+          "percentage": 11.61
+        },
+        {
+          "name": "CMake",
+          "percentage": 1.29
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.91
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "vllm",
+      "owner": "vllm-project",
+      "url": "https://github.com/vllm-project/vllm",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2023-02-09T11:23:20Z",
+      "first_commit": "2025-04-27T12:33:09Z",
+      "last_commit": "2025-04-30T17:03:20Z"
+    },
+    "metrics": {
+      "stars": 46263,
+      "forks": 7175,
+      "watchers": 381,
+      "disk_usage_kb": 49182,
+      "open_issues": 8286,
+      "closed_issues": 6512,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 8576,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 56,
+        "active": 1,
+        "by_commit": [
+          {
+            "login": "hmellor",
+            "commits": 13
+          },
+          {
+            "login": "DarkLight1337",
+            "commits": 8
+          },
+          {
+            "login": "reidliu41",
+            "commits": 5
+          },
+          {
+            "login": "russellb",
+            "commits": 5
+          },
+          {
+            "login": "mgoin",
+            "commits": 4
+          },
+          {
+            "login": "chaunceyjiang",
+            "commits": 4
+          },
+          {
+            "login": "aarnphm",
+            "commits": 3
+          },
+          {
+            "login": "NickLucche",
+            "commits": 3
+          },
+          {
+            "login": "ekagra-ranjan",
+            "commits": 3
+          },
+          {
+            "login": "gshtras",
+            "commits": 2
+          },
+          {
+            "login": "jikunshang",
+            "commits": 2
+          },
+          {
+            "login": "huydhn",
+            "commits": 2
+          },
+          {
+            "login": "LucasWilkinson",
+            "commits": 2
+          },
+          {
+            "login": "alex-jw-brooks",
+            "commits": 2
+          },
+          {
+            "login": "davidxia",
+            "commits": 1
+          },
+          {
+            "login": "hhy3",
+            "commits": 1
+          },
+          {
+            "login": "psav",
+            "commits": 1
+          },
+          {
+            "login": "alec-flowers",
+            "commits": 1
+          },
+          {
+            "login": "dr75",
+            "commits": 1
+          },
+          {
+            "login": "lengrongfu",
+            "commits": 1
+          },
+          {
+            "login": "houseroad",
+            "commits": 1
+          },
+          {
+            "login": "mlinmg",
+            "commits": 1
+          },
+          {
+            "login": "gmarinho2",
+            "commits": 1
+          },
+          {
+            "login": "khluu",
+            "commits": 1
+          },
+          {
+            "login": "benchislett",
+            "commits": 1
+          },
+          {
+            "login": "luyuzhe111",
+            "commits": 1
+          },
+          {
+            "login": "dilipgb",
+            "commits": 1
+          },
+          {
+            "login": "Isotr0py",
+            "commits": 1
+          },
+          {
+            "login": "casinca",
+            "commits": 1
+          },
+          {
+            "login": "Alexei-V-Ivanov-AMD",
+            "commits": 1
+          },
+          {
+            "login": "tywuAMD",
+            "commits": 1
+          },
+          {
+            "login": "mayuyuace",
+            "commits": 1
+          },
+          {
+            "login": "mofanke",
+            "commits": 1
+          },
+          {
+            "login": "heheda12345",
+            "commits": 1
+          },
+          {
+            "login": "a2q1p",
+            "commits": 1
+          },
+          {
+            "login": "jeejeelee",
+            "commits": 1
+          },
+          {
+            "login": "Zerohertz",
+            "commits": 1
+          },
+          {
+            "login": "ponix-j",
+            "commits": 1
+          },
+          {
+            "login": "qscqesze",
+            "commits": 1
+          },
+          {
+            "login": "timzsu",
+            "commits": 1
+          },
+          {
+            "login": "zou3519",
+            "commits": 1
+          },
+          {
+            "login": "r-barnes",
+            "commits": 1
+          },
+          {
+            "login": "luccafong",
+            "commits": 1
+          },
+          {
+            "login": "mmoskal",
+            "commits": 1
+          },
+          {
+            "login": "wuisawesome",
+            "commits": 1
+          },
+          {
+            "login": "simon-mo",
+            "commits": 1
+          },
+          {
+            "login": "charlifu",
+            "commits": 1
+          },
+          {
+            "login": "idouba",
+            "commits": 1
+          },
+          {
+            "login": "Eviannn",
+            "commits": 1
+          },
+          {
+            "login": "njhill",
+            "commits": 1
+          },
+          {
+            "login": "KuntaiDu",
+            "commits": 1
+          },
+          {
+            "login": "Ther-LF",
+            "commits": 1
+          },
+          {
+            "login": "lkm-schulz",
+            "commits": 1
+          },
+          {
+            "login": "LiuXiaoxuanPKU",
+            "commits": 1
+          },
+          {
+            "login": "cascade812",
+            "commits": 1
+          },
+          {
+            "login": "kaixih",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 811,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-21",
+          "count": 6
+        },
+        {
+          "week": "2025-04-28",
+          "count": 94
+        }
+      ],
+      "active_lifespan_days": 7
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 84.91
+        },
+        {
+          "name": "Cuda",
+          "percentage": 10.23
+        },
+        {
+          "name": "C++",
+          "percentage": 3.76
+        },
+        {
+          "name": "C",
+          "percentage": 0.57
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.54
+        }
+      ]
+    },
+    "license": "Apache License 2.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  }
+]

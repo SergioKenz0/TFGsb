@@ -1,4 +1,7 @@
+// src/components/Dashboard.jsx
 import { useEffect, useState } from "react";
+import ReportCard from "./ReportCard";
+import "../assets/styles/components/_dashboard.scss";
 
 const Dashboard = () => {
   const [reports, setReports] = useState([]);
@@ -21,30 +24,16 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h1>Reportes de Análisis</h1>
-      {error && <p className="error">{error}</p>}
+      <h1 className="dashboard__title">Panel de Informes</h1>
 
+      {error && <p className="dashboard__error">{error}</p>}
       {reports.length === 0 && !error && (
-        <p className="loading">Cargando informes...</p>
+        <p className="dashboard__loading">Cargando informes...</p>
       )}
 
-      <div className="reports-container">
+      <div className="dashboard__grid">
         {reports.map((report, index) => (
-          <div className="report-card" key={index}>
-            <h3>{report.filename}</h3>
-            {report.repos && report.repos.length > 0 ? (
-              <ul>
-                {report.repos.map((repo, i) => (
-                  <li key={i}>
-                    <strong>{repo.repo?.name}</strong> — ⭐ {repo.metrics?.stars} — 🕒{" "}
-                    {repo.repo?.created_at?.split("T")[0]}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>⚠️ Reporte sin repositorios.</p>
-            )}
-          </div>
+          <ReportCard key={index} index={index} report={report} />
         ))}
       </div>
     </div>

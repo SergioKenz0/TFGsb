@@ -1,0 +1,40 @@
+.header {
+  background-color: #4a3ddf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  &__logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &--github {
+      color: #24282d; // gris claro
+      margin-right: 4px;
+    }
+
+    &--repominer {
+      color: #ffffff; // blanco puro
+    }
+  }
+
+  &__button {
+    background-color: #ffffff;
+    color: #4a3ddf;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

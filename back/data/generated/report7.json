@@ -1,0 +1,802 @@
+[
+  {
+    "repo": {
+      "name": "mlx-swift-examples",
+      "owner": "ml-explore",
+      "url": "https://github.com/ml-explore/mlx-swift-examples",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2024-02-22T17:47:37Z",
+      "first_commit": "2024-05-28T21:05:37Z",
+      "last_commit": "2025-04-30T19:44:38Z"
+    },
+    "metrics": {
+      "stars": 1740,
+      "forks": 214,
+      "watchers": 27,
+      "disk_usage_kb": 545,
+      "open_issues": 134,
+      "closed_issues": 99,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 160,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 30,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "davidkoski",
+            "commits": 34
+          },
+          {
+            "login": "DePasqualeOrg",
+            "commits": 23
+          },
+          {
+            "login": "johnmai-dev",
+            "commits": 5
+          },
+          {
+            "login": "ibrahimcetin",
+            "commits": 5
+          },
+          {
+            "login": "Alessan-git",
+            "commits": 4
+          },
+          {
+            "login": "awni",
+            "commits": 3
+          },
+          {
+            "login": "nwh",
+            "commits": 2
+          },
+          {
+            "login": "ronaldmannak",
+            "commits": 2
+          },
+          {
+            "login": "adrgrondin",
+            "commits": 1
+          },
+          {
+            "login": "smdesai",
+            "commits": 1
+          },
+          {
+            "login": "gtokman",
+            "commits": 1
+          },
+          {
+            "login": "WesleyBatista",
+            "commits": 1
+          },
+          {
+            "login": "cyrilzakka",
+            "commits": 1
+          },
+          {
+            "login": "toffaletti",
+            "commits": 1
+          },
+          {
+            "login": "ynagatomo",
+            "commits": 1
+          },
+          {
+            "login": "nvnsho",
+            "commits": 1
+          },
+          {
+            "login": "tzxdtc",
+            "commits": 1
+          },
+          {
+            "login": "hasnat",
+            "commits": 1
+          },
+          {
+            "login": "pcuenca",
+            "commits": 1
+          },
+          {
+            "login": "JCSooHwanCho",
+            "commits": 1
+          },
+          {
+            "login": "rudrankriyam",
+            "commits": 1
+          },
+          {
+            "login": "louen",
+            "commits": 1
+          },
+          {
+            "login": "shuhongwu",
+            "commits": 1
+          },
+          {
+            "login": "finnvoor",
+            "commits": 1
+          },
+          {
+            "login": "LiYanan2004",
+            "commits": 1
+          },
+          {
+            "login": "anishbasu",
+            "commits": 1
+          },
+          {
+            "login": "nanguoyu",
+            "commits": 1
+          },
+          {
+            "login": "jsmp",
+            "commits": 1
+          },
+          {
+            "login": "An\u00f3nimo",
+            "commits": 1
+          },
+          {
+            "login": "rounak",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 433,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-05-27",
+          "count": 2
+        },
+        {
+          "week": "2024-06-10",
+          "count": 1
+        },
+        {
+          "week": "2024-06-24",
+          "count": 1
+        },
+        {
+          "week": "2024-07-01",
+          "count": 2
+        },
+        {
+          "week": "2024-07-22",
+          "count": 3
+        },
+        {
+          "week": "2024-07-29",
+          "count": 3
+        },
+        {
+          "week": "2024-08-12",
+          "count": 1
+        },
+        {
+          "week": "2024-08-26",
+          "count": 5
+        },
+        {
+          "week": "2024-09-02",
+          "count": 1
+        },
+        {
+          "week": "2024-09-09",
+          "count": 5
+        },
+        {
+          "week": "2024-09-23",
+          "count": 3
+        },
+        {
+          "week": "2024-09-30",
+          "count": 4
+        },
+        {
+          "week": "2024-10-14",
+          "count": 1
+        },
+        {
+          "week": "2024-10-21",
+          "count": 2
+        },
+        {
+          "week": "2024-10-28",
+          "count": 2
+        },
+        {
+          "week": "2024-11-04",
+          "count": 1
+        },
+        {
+          "week": "2024-11-18",
+          "count": 3
+        },
+        {
+          "week": "2024-12-02",
+          "count": 2
+        },
+        {
+          "week": "2024-12-09",
+          "count": 2
+        },
+        {
+          "week": "2024-12-16",
+          "count": 5
+        },
+        {
+          "week": "2024-12-23",
+          "count": 1
+        },
+        {
+          "week": "2025-01-06",
+          "count": 1
+        },
+        {
+          "week": "2025-01-27",
+          "count": 6
+        },
+        {
+          "week": "2025-02-03",
+          "count": 2
+        },
+        {
+          "week": "2025-02-10",
+          "count": 2
+        },
+        {
+          "week": "2025-02-24",
+          "count": 3
+        },
+        {
+          "week": "2025-03-03",
+          "count": 2
+        },
+        {
+          "week": "2025-03-10",
+          "count": 7
+        },
+        {
+          "week": "2025-03-17",
+          "count": 1
+        },
+        {
+          "week": "2025-03-24",
+          "count": 4
+        },
+        {
+          "week": "2025-03-31",
+          "count": 1
+        },
+        {
+          "week": "2025-04-07",
+          "count": 5
+        },
+        {
+          "week": "2025-04-14",
+          "count": 7
+        },
+        {
+          "week": "2025-04-21",
+          "count": 1
+        },
+        {
+          "week": "2025-04-28",
+          "count": 8
+        }
+      ],
+      "active_lifespan_days": 336
+    },
+    "languages": {
+      "main": "Swift",
+      "breakdown": [
+        {
+          "name": "Swift",
+          "percentage": 99.35
+        },
+        {
+          "name": "Python",
+          "percentage": 0.51
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.14
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "ladybird",
+      "owner": "LadybirdBrowser",
+      "url": "https://github.com/LadybirdBrowser/ladybird",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2024-05-30T09:18:10Z",
+      "first_commit": "2025-04-26T14:45:37Z",
+      "last_commit": "2025-05-01T08:30:00Z"
+    },
+    "metrics": {
+      "stars": 38054,
+      "forks": 1579,
+      "watchers": 199,
+      "disk_usage_kb": 366705,
+      "open_issues": 875,
+      "closed_issues": 490,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 3648,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 18,
+        "active": 3,
+        "by_commit": [
+          {
+            "login": "awesomekling",
+            "commits": 24
+          },
+          {
+            "login": "trflynn89",
+            "commits": 15
+          },
+          {
+            "login": "stelar7",
+            "commits": 12
+          },
+          {
+            "login": "tcl3",
+            "commits": 9
+          },
+          {
+            "login": "devgianlu",
+            "commits": 8
+          },
+          {
+            "login": "shannonbooth",
+            "commits": 7
+          },
+          {
+            "login": "ADKaster",
+            "commits": 6
+          },
+          {
+            "login": "AtkinsSJ",
+            "commits": 4
+          },
+          {
+            "login": "Gingeh",
+            "commits": 3
+          },
+          {
+            "login": "gmta",
+            "commits": 3
+          },
+          {
+            "login": "kalenikaliaksandr",
+            "commits": 2
+          },
+          {
+            "login": "aplefull",
+            "commits": 1
+          },
+          {
+            "login": "mobounya",
+            "commits": 1
+          },
+          {
+            "login": "Psychpsyo",
+            "commits": 1
+          },
+          {
+            "login": "rmg-x",
+            "commits": 1
+          },
+          {
+            "login": "h2337",
+            "commits": 1
+          },
+          {
+            "login": "teaalltr",
+            "commits": 1
+          },
+          {
+            "login": "alimpfard",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 335,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-21",
+          "count": 13
+        },
+        {
+          "week": "2025-04-28",
+          "count": 87
+        }
+      ],
+      "active_lifespan_days": 7
+    },
+    "languages": {
+      "main": "C++",
+      "breakdown": [
+        {
+          "name": "C++",
+          "percentage": 65.27
+        },
+        {
+          "name": "HTML",
+          "percentage": 22.41
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 11.13
+        },
+        {
+          "name": "CMake",
+          "percentage": 0.69
+        },
+        {
+          "name": "Objective-C++",
+          "percentage": 0.49
+        }
+      ]
+    },
+    "license": "BSD 2-Clause \"Simplified\" License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "generative-ai-for-beginners",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "owner_type": "Organization",
+      "owner_location": "Redmond, WA",
+      "created_at": "2023-06-19T16:28:59Z",
+      "first_commit": "2025-02-28T13:28:57Z",
+      "last_commit": "2025-04-14T08:54:03Z"
+    },
+    "metrics": {
+      "stars": 81849,
+      "forks": 41987,
+      "watchers": 742,
+      "disk_usage_kb": 131510,
+      "open_issues": 153,
+      "closed_issues": 143,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 479,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 15,
+        "active": 3,
+        "by_commit": [
+          {
+            "login": "koreyspace",
+            "commits": 32
+          },
+          {
+            "login": "nhlongnguyen",
+            "commits": 16
+          },
+          {
+            "login": "erencanbas",
+            "commits": 10
+          },
+          {
+            "login": "dependabot[bot]",
+            "commits": 9
+          },
+          {
+            "login": "hyoshioka0128",
+            "commits": 9
+          },
+          {
+            "login": "jt-216",
+            "commits": 9
+          },
+          {
+            "login": "SaiHarshaK",
+            "commits": 5
+          },
+          {
+            "login": "Chanchal-D",
+            "commits": 2
+          },
+          {
+            "login": "angpt",
+            "commits": 2
+          },
+          {
+            "login": "erdembayar",
+            "commits": 1
+          },
+          {
+            "login": "sxdleroy",
+            "commits": 1
+          },
+          {
+            "login": "leestott",
+            "commits": 1
+          },
+          {
+            "login": "softchris",
+            "commits": 1
+          },
+          {
+            "login": "predator4hack",
+            "commits": 1
+          },
+          {
+            "login": "dbsectrainer",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 664,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-02-24",
+          "count": 4
+        },
+        {
+          "week": "2025-03-03",
+          "count": 5
+        },
+        {
+          "week": "2025-03-10",
+          "count": 22
+        },
+        {
+          "week": "2025-03-17",
+          "count": 1
+        },
+        {
+          "week": "2025-03-24",
+          "count": 11
+        },
+        {
+          "week": "2025-03-31",
+          "count": 10
+        },
+        {
+          "week": "2025-04-07",
+          "count": 18
+        },
+        {
+          "week": "2025-04-14",
+          "count": 29
+        }
+      ],
+      "active_lifespan_days": 49
+    },
+    "languages": {
+      "main": "Jupyter Notebook",
+      "breakdown": [
+        {
+          "name": "Jupyter Notebook",
+          "percentage": 87.08
+        },
+        {
+          "name": "Python",
+          "percentage": 8.29
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 2.79
+        },
+        {
+          "name": "TypeScript",
+          "percentage": 1.54
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.3
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  },
+  {
+    "repo": {
+      "name": "Deep-Live-Cam",
+      "owner": "hacksider",
+      "url": "https://github.com/hacksider/Deep-Live-Cam",
+      "owner_type": "User",
+      "owner_location": null,
+      "created_at": "2023-09-24T13:19:31Z",
+      "first_commit": "2025-01-05T12:19:36Z",
+      "last_commit": "2025-04-30T14:28:46Z"
+    },
+    "metrics": {
+      "stars": 55413,
+      "forks": 7951,
+      "watchers": 355,
+      "disk_usage_kb": 155750,
+      "open_issues": 787,
+      "closed_issues": 747,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 178,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 11,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "hacksider",
+            "commits": 53
+          },
+          {
+            "login": "KRSHH",
+            "commits": 29
+          },
+          {
+            "login": "qitianai",
+            "commits": 3
+          },
+          {
+            "login": "kier007",
+            "commits": 3
+          },
+          {
+            "login": "NeuroDonu",
+            "commits": 2
+          },
+          {
+            "login": "wesleySTX",
+            "commits": 2
+          },
+          {
+            "login": "aaddyy227",
+            "commits": 2
+          },
+          {
+            "login": "carpusherw",
+            "commits": 2
+          },
+          {
+            "login": "nimishgautam",
+            "commits": 2
+          },
+          {
+            "login": "harmeetsingh-work",
+            "commits": 1
+          },
+          {
+            "login": "soulee-dev",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 584,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-12-30",
+          "count": 8
+        },
+        {
+          "week": "2025-01-06",
+          "count": 25
+        },
+        {
+          "week": "2025-01-13",
+          "count": 15
+        },
+        {
+          "week": "2025-01-27",
+          "count": 6
+        },
+        {
+          "week": "2025-02-03",
+          "count": 19
+        },
+        {
+          "week": "2025-02-10",
+          "count": 3
+        },
+        {
+          "week": "2025-03-10",
+          "count": 3
+        },
+        {
+          "week": "2025-03-17",
+          "count": 4
+        },
+        {
+          "week": "2025-03-24",
+          "count": 3
+        },
+        {
+          "week": "2025-03-31",
+          "count": 1
+        },
+        {
+          "week": "2025-04-07",
+          "count": 3
+        },
+        {
+          "week": "2025-04-14",
+          "count": 9
+        },
+        {
+          "week": "2025-04-28",
+          "count": 1
+        }
+      ],
+      "active_lifespan_days": 119
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 99.93
+        },
+        {
+          "name": "Batchfile",
+          "percentage": 0.07
+        }
+      ]
+    },
+    "license": "GNU Affero General Public License v3.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    }
+  }
+]
