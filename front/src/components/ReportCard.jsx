@@ -16,9 +16,10 @@ const ReportCard = ({ index, report }) => {
               <li key={i}>{r.repo.name}</li>
             ))}
           </ul>
-          <Link className="report-card__link" to={`/analyze?id=${index + 1}`}>
+          <Link to={`/report/${index + 1}`} className="report-card__link">
             📊 Ver análisis
           </Link>
+
         </div>
         <div className="mini-chart">
           <MiniPopularityChart repos={report.repos} />

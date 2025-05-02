@@ -1,9 +1,16 @@
 // src/assets/styles/main.scss
 
 @use 'base/global';
+
+
 @use 'abstracts/variables';
+
+
 @use 'components/dashboard';
-@use 'pages/analyze-page';
 @use 'components/report-card';
 @use 'components/header';
+
+
+@use 'pages/analyze-page';
 @use 'pages/create-report-page';
+@use 'pages/report-detail';
