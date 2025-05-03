@@ -2,14 +2,14 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../assets/styles/pages/_report-detail.scss";
 //Charts
-import CreationVsFirstCommitChart from "../components/charts/CreationVsFirstCommitChart";
-import OwnerTypeChart from "../components/charts/OwnerTypeChart";
-import OwnerLocationChart from "../components/charts/OwnerLocationChart";
+import CreationDelayChart  from "../components/charts/CreationDelayChart";
+import OwnerTypeByLocationChart  from "../components/charts/OwnerTypeByLocationChart";
+import AverageCommitsPerWeekChart from "../components/charts/AverageCommitsPerWeekChart";
 import LanguagesBreakdownChart from "../components/charts/LanguagesBreakdownChart";
 import PopularityChart from "../components/charts/PopularityChart";
 import CommitActivityChart from "../components/charts/CommitActivityChart";
-import IssuesOpenClosedChart from "../components/charts/IssuesOpenClosedChart";
-import TopContributorsChart from "../components/charts/TopContributorsChart"; 
+import ClosedIssuesPercentageChart from "../components/charts/ClosedIssuesPercentageChart";
+import CommitConcentrationChart from "../components/charts/CommitConcentrationChart"; 
 
 
 
@@ -58,20 +58,20 @@ const ReportDetailPage = () => {
         {page === 1 && (
           <>
             <div className="report-detail__chart-card">
-              <h3>⏱️ Creación vs Primer Commit</h3>
-              <CreationVsFirstCommitChart repos={report.repos} />
+              <h3>⏱️ Tiempo de creación → primer commit</h3>
+              <CreationDelayChart repos={report.repos} />
             </div>
             <div className="report-detail__chart-card">
-              <h3>🏷️ Tipo de propietario</h3>
-              <OwnerTypeChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-              <h3>📍 Ubicación de propietarios</h3>
-              <OwnerLocationChart repos={report.repos} />
+              <h3>📍 Tipo + ubicación de propietario</h3>
+              <OwnerTypeByLocationChart repos={report.repos} />
             </div>
             <div className="report-detail__chart-card">
               <h3>👨‍💻 Lenguajes principales por repositorio</h3>
               <LanguagesBreakdownChart repos={report.repos} />
+            </div>
+            <div className="report-detail__chart-card">
+              <h3>📆 Promedio de commits por semana</h3>
+                <AverageCommitsPerWeekChart repos={report.repos} />
             </div>
           </>
         )}
@@ -88,12 +88,12 @@ const ReportDetailPage = () => {
               <CommitActivityChart repos={report.repos} />
             </div>
             <div className="report-detail__chart-card">
-              <h3>🐛 Issues abiertas vs cerradas</h3>
-              <IssuesOpenClosedChart repos={report.repos} />
+            <h3>✅ % de issues cerradas</h3>
+              <ClosedIssuesPercentageChart repos={report.repos} />
             </div>
             <div className="report-detail__chart-card">
-              <h3>👥 Concentración de contribuciones</h3>
-              <TopContributorsChart repos={report.repos} />
+            <h3>⚖️ Concentración de commits (80/20)</h3>
+              <CommitConcentrationChart repos={report.repos} />
             </div>
           </>
         )}
