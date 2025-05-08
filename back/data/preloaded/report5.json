@@ -1,0 +1,119 @@
+[
+  {
+    "repo": {
+      "name": "Microsoft365DSC",
+      "owner": "microsoft",
+      "url": "https://github.com/microsoft/Microsoft365DSC",
+      "owner_type": "Organization",
+      "owner_location": "Redmond, WA",
+      "created_at": "2018-11-21T16:54:50Z",
+      "first_commit": "2025-04-15T12:35:10Z",
+      "last_commit": "2025-05-02T17:52:10Z"
+    },
+    "metrics": {
+      "stars": 1802,
+      "forks": 547,
+      "watchers": 81,
+      "disk_usage_kb": 211693,
+      "open_issues": 2686,
+      "closed_issues": 2372,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 3232,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 6,
+        "active": 3,
+        "by_commit": [
+          {
+            "login": "NikCharlebois",
+            "commits": 52
+          },
+          {
+            "login": "FabienTschanz",
+            "commits": 25
+          },
+          {
+            "login": "ykuijs",
+            "commits": 18
+          },
+          {
+            "login": "M365DSCApprover",
+            "commits": 2
+          },
+          {
+            "login": "m365dscapproval",
+            "commits": 2
+          },
+          {
+            "login": "kasaxena5",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 2354,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-14",
+          "count": 37
+        },
+        {
+          "week": "2025-04-21",
+          "count": 28
+        },
+        {
+          "week": "2025-04-28",
+          "count": 35
+        }
+      ],
+      "active_lifespan_days": 14
+    },
+    "languages": {
+      "main": "PowerShell",
+      "breakdown": [
+        {
+          "name": "PowerShell",
+          "percentage": 99.82
+        },
+        {
+          "name": "TypeScript",
+          "percentage": 0.15
+        },
+        {
+          "name": "SCSS",
+          "percentage": 0.02
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.01
+        },
+        {
+          "name": "CSS",
+          "percentage": 0.0
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.08,
+      "issue_closure_rate": 88.31,
+      "avg_response_time_issues": 3.0,
+      "avg_merge_time": 1.92,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  }
+]

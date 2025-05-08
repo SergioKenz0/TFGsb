@@ -2,6 +2,7 @@ import requests
 import json
 import sys
 import os
+import re
 from urllib.parse import urlparse
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -14,9 +15,7 @@ if not GITHUB_TOKEN:
     print("❌ No se encontró el token de GitHub en las variables de entorno.")
     sys.exit(1)
 
-HEADERS = {
-    "Authorization": f"Bearer {GITHUB_TOKEN}"
-}
+HEADERS = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
 
 # === FUNCIONES UTILITARIAS ===
 
@@ -41,6 +40,100 @@ def calcular_dias(fecha1, fecha2):
         return (f2 - f1).days
     except:
         return "N/A"
+
+def calcular_promedio_dias_entre_commits(fechas_iso):
+    fechas = [datetime.fromisoformat(f.replace("Z", "+00:00")) for f in fechas_iso]
+    fechas.sort()
+    if len(fechas) < 2:
+        return "N/A"
+    diferencias = [(fechas[i+1] - fechas[i]).days for i in range(len(fechas) - 1)]
+    promedio = sum(diferencias) / len(diferencias)
+    return round(promedio, 2)
+
+def calcular_tiempo_medio_respuesta(owner, repo):
+    query = f"""
+    {{
+      repository(owner: "{owner}", name: "{repo}") {{
+        issues(first: 50, orderBy: {{field: CREATED_AT, direction: DESC}}) {{
+          nodes {{
+            createdAt
+            comments(first: 1) {{
+              nodes {{
+                createdAt
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+    """
+    data = ejecutar_consulta(query)
+    issues = data["data"]["repository"]["issues"]["nodes"]
+    tiempos_respuesta = []
+    for issue in issues:
+        created_at = issue["createdAt"]
+        if issue["comments"]["nodes"]:
+            first_response = issue["comments"]["nodes"][0]["createdAt"]
+            dias = calcular_dias(created_at, first_response)
+            if dias != "N/A":
+                tiempos_respuesta.append(dias)
+    return round(sum(tiempos_respuesta) / len(tiempos_respuesta), 2) if tiempos_respuesta else "N/A"
+
+def calcular_merge_time(owner, repo):
+    query = f"""
+    {{
+      repository(owner: "{owner}", name: "{repo}") {{
+        pullRequests(first: 50, states: MERGED, orderBy: {{field: CREATED_AT, direction: DESC}}) {{
+          nodes {{
+            createdAt
+            mergedAt
+          }}
+        }}
+      }}
+    }}
+    """
+    data = ejecutar_consulta(query)
+    prs = data["data"]["repository"]["pullRequests"]["nodes"]
+    dias = [
+        calcular_dias(pr["createdAt"], pr["mergedAt"])
+        for pr in prs if pr["createdAt"] and pr["mergedAt"]
+    ]
+    return round(sum(dias) / len(dias), 2) if dias else "N/A"
+
+def calcular_ratio_contrib_externos(contribuidores, owner):
+    externos = 0
+    for c in contribuidores:
+        login = c["login"].lower()
+        if owner.lower() not in login:
+            externos += 1
+    if len(contribuidores) == 0:
+        return "N/A"
+    return round((externos / len(contribuidores)) * 100, 2)
+
+def detectar_cobertura_tests(readme_text):
+    if not readme_text:
+        return "N/A"
+
+    # Patrones típicos de coverage
+    patrones = [
+        r'coverage[\s:-]+(\d{1,3})\s?%',                   # coverage: 90%
+        r'(\d{1,3})\s?%[\s-]*(coverage|cobertura)',       # 92% coverage
+        r'img\.shields\.io.*coverage.*[-/](\d{1,3})%?',   # shields.io badge
+        r'codecov\.io.*badge.*?(\d{1,3})%?',              # codecov badge with %
+        r'coveralls\.io.*badge.*?(\d{1,3})%?'             # coveralls badge with %
+    ]
+
+    for patron in patrones:
+        match = re.search(patron, readme_text, re.IGNORECASE)
+        if match:
+            try:
+                porcentaje = int(match.group(1))
+                if 0 <= porcentaje <= 100:
+                    return f"{porcentaje}%"
+            except:
+                continue
+
+    return "N/A"
 
 # === ANÁLISIS DE COMMIT Y ACTIVIDAD ===
 
@@ -78,7 +171,8 @@ def obtener_commits(owner, repo):
             "contributors": [],
             "commit_activity": [],
             "active_contributors": 0,
-            "active_lifespan_days": "N/A"
+            "active_lifespan_days": "N/A",
+            "commit_dates": []
         }
 
     commits = [e["node"] for e in edges]
@@ -98,11 +192,7 @@ def obtener_commits(owner, repo):
     contributors = [{"login": k, "commits": v} for k, v in sorted(contrib_dict.items(), key=lambda x: -x[1])]
     active_contributors = [c for c in contributors if c["commits"] >= total_commits * 0.1]
     activity = [{"week": w, "count": c} for w, c in sorted(commit_week.items())]
-
-    if activity:
-        active_lifespan_days = calcular_dias(activity[0]["week"] + "T00:00:00Z", activity[-1]["week"] + "T00:00:00Z")
-    else:
-        active_lifespan_days = "N/A"
+    active_lifespan_days = calcular_dias(activity[0]["week"] + "T00:00:00Z", activity[-1]["week"] + "T00:00:00Z") if activity else "N/A"
 
     return {
         "first_commit": first_commit,
@@ -110,7 +200,8 @@ def obtener_commits(owner, repo):
         "contributors": contributors,
         "active_contributors": len(active_contributors),
         "commit_activity": activity,
-        "active_lifespan_days": active_lifespan_days
+        "active_lifespan_days": active_lifespan_days,
+        "commit_dates": [c["committedDate"] for c in commits]
     }
 
 def obtener_datos_propietario(owner):
@@ -136,6 +227,9 @@ def obtener_datos_propietario(owner):
 
 def analizar_repo(owner, repo):
     commit_info = obtener_commits(owner, repo)
+    issue_response_time = calcular_tiempo_medio_respuesta(owner, repo)
+    merge_time = calcular_merge_time(owner, repo)
+
     query = f"""
     {{
       repository(owner: "{owner}", name: "{repo}") {{
@@ -170,6 +264,8 @@ def analizar_repo(owner, repo):
         {"name": l["node"]["name"], "percentage": round((l["size"] / total_lang) * 100, 2)}
         for l in repo_data["languages"]["edges"]
     ] if total_lang > 0 else []
+    readme_text = repo_data["object"]["text"] if repo_data["object"] else ""
+    test_coverage = detectar_cobertura_tests(readme_text)
 
     return {
         "repo": {
@@ -219,6 +315,14 @@ def analizar_repo(owner, repo):
             "code_of_conduct": False,
             "issue_templates": False,
             "pull_request_template": False
+        },
+        "advanced_metrics": {
+            "avg_days_between_commits": calcular_promedio_dias_entre_commits(commit_info["commit_dates"]),
+            "issue_closure_rate": round((repo_data["closedIssues"]["totalCount"] / (repo_data["issues"]["totalCount"] + 1e-6)) * 100, 2),
+            "avg_response_time_issues": issue_response_time,
+            "avg_merge_time": merge_time,
+            "external_contributors_ratio": calcular_ratio_contrib_externos(commit_info["contributors"], owner),
+            "test_coverage": test_coverage
         }
     }
 

@@ -1,0 +1,155 @@
+[
+  {
+    "repo": {
+      "name": "ladybird",
+      "owner": "LadybirdBrowser",
+      "url": "https://github.com/LadybirdBrowser/ladybird",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2024-05-30T09:18:10Z",
+      "first_commit": "2025-04-29T11:33:08Z",
+      "last_commit": "2025-05-05T13:21:43Z"
+    },
+    "metrics": {
+      "stars": 38739,
+      "forks": 1614,
+      "watchers": 205,
+      "disk_usage_kb": 367242,
+      "open_issues": 893,
+      "closed_issues": 495,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 3704,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 16,
+        "active": 3,
+        "by_commit": [
+          {
+            "login": "AtkinsSJ",
+            "commits": 21
+          },
+          {
+            "login": "trflynn89",
+            "commits": 19
+          },
+          {
+            "login": "awesomekling",
+            "commits": 18
+          },
+          {
+            "login": "stelar7",
+            "commits": 7
+          },
+          {
+            "login": "gmta",
+            "commits": 6
+          },
+          {
+            "login": "tcl3",
+            "commits": 6
+          },
+          {
+            "login": "ADKaster",
+            "commits": 6
+          },
+          {
+            "login": "Psychpsyo",
+            "commits": 4
+          },
+          {
+            "login": "kalenikaliaksandr",
+            "commits": 4
+          },
+          {
+            "login": "bplaat",
+            "commits": 3
+          },
+          {
+            "login": "ttrssreal",
+            "commits": 1
+          },
+          {
+            "login": "shannonbooth",
+            "commits": 1
+          },
+          {
+            "login": "aplefull",
+            "commits": 1
+          },
+          {
+            "login": "mobounya",
+            "commits": 1
+          },
+          {
+            "login": "Gingeh",
+            "commits": 1
+          },
+          {
+            "login": "rmg-x",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 340,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-28",
+          "count": 97
+        },
+        {
+          "week": "2025-05-05",
+          "count": 3
+        }
+      ],
+      "active_lifespan_days": 7
+    },
+    "languages": {
+      "main": "C++",
+      "breakdown": [
+        {
+          "name": "C++",
+          "percentage": 65.29
+        },
+        {
+          "name": "HTML",
+          "percentage": 22.42
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 11.11
+        },
+        {
+          "name": "CMake",
+          "percentage": 0.69
+        },
+        {
+          "name": "Objective-C++",
+          "percentage": 0.49
+        }
+      ]
+    },
+    "license": "BSD 2-Clause \"Simplified\" License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.0,
+      "issue_closure_rate": 55.43,
+      "avg_response_time_issues": 0.39,
+      "avg_merge_time": 0.2,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  }
+]

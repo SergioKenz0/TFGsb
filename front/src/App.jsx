@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import AnalyzePage from "./pages/AnalyzePage";
 import CreateReportPage from "./pages/CreateReportPage";
 import Header from "./components/Header";
 import ReportDetailPage from "./pages/ReportDetailPage";

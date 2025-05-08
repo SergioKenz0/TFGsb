@@ -1,23 +1,23 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../assets/styles/pages/_report-detail.scss";
-//Charts
-import CreationDelayChart  from "../components/charts/CreationDelayChart";
-import OwnerTypeByLocationChart  from "../components/charts/OwnerTypeByLocationChart";
-import AverageCommitsPerWeekChart from "../components/charts/AverageCommitsPerWeekChart";
-import LanguagesBreakdownChart from "../components/charts/LanguagesBreakdownChart";
-import PopularityChart from "../components/charts/PopularityChart";
-import CommitActivityChart from "../components/charts/CommitActivityChart";
-import ClosedIssuesPercentageChart from "../components/charts/ClosedIssuesPercentageChart";
-import CommitConcentrationChart from "../components/charts/CommitConcentrationChart"; 
 
+// Componentes de gráficos (nuevas agrupaciones)
+import ActividadCharts from "../components/ActividadCharts";
+import ComunidadCharts from "../components/ComunidadCharts";
+import MantenimientoCharts from "../components/MantenimientoCharts";
+import IntegracionCharts from "../components/IntegracionCharts";
 
+// Otros componentes
+import MiniNavBar from "../components/MiniNavBar";
+import ResumenDiagnostico from "../components/ResumenDiagnostico";
 
 const ReportDetailPage = () => {
   const { id } = useParams();
   const [report, setReport] = useState(null);
   const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0); // 0: Resumen, 1-4: análisis por secciones
+
   const API_BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
@@ -42,80 +42,34 @@ const ReportDetailPage = () => {
       <div className="report-detail__header">
         <h2>
           Informe {id}{" "}
-          <span className="report-detail__count">
-                 {report.repos.length} repositorios
-          </span>
+          <span className="report-detail__count">{report.repos.length} repositorios</span>
         </h2>
+        <MiniNavBar page={page} setPage={setPage} />
       </div>
 
-      <div className="report-detail__repos">
-        {report.repos.map((r, i) => (
-          <span key={i}>{r.repo.name}</span>
-        ))}
-      </div>
+      {/* Etiquetas de repos visibles solo en la vista de resumen */}
+      {page === 0 && (
+        <div className="report-detail__repos">
+          {report.repos.map((r, i) => (
+            <span key={i} className="report-detail__repo-tag">
+              {r.repo.name}
+            </span>
+          ))}
+        </div>
+      )}
 
-      <div className="report-detail__grid">
-        {page === 1 && (
-          <>
-            <div className="report-detail__chart-card">
-              <h3>⏱️ Tiempo de creación → primer commit</h3>
-              <CreationDelayChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-              <h3>📍 Tipo + ubicación de propietario</h3>
-              <OwnerTypeByLocationChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-              <h3>👨‍💻 Lenguajes principales por repositorio</h3>
-              <LanguagesBreakdownChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-              <h3>📆 Promedio de commits por semana</h3>
-                <AverageCommitsPerWeekChart repos={report.repos} />
-            </div>
-          </>
-        )}
+      {/* Subvista: Resumen */}
+      {page === 0 && (
+        <div className="report-detail__summary">
+          <ResumenDiagnostico repos={report.repos} />
+        </div>
+      )}
 
-        {page === 2 && (
-          <>
-            {/* Aquí irán los gráficos 5-8 */}
-            <div className="report-detail__chart-card">
-              <h3>⭐ Popularidad</h3>
-              <PopularityChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-              <h3>📈 Actividad de commits</h3>
-              <CommitActivityChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-            <h3>✅ % de issues cerradas</h3>
-              <ClosedIssuesPercentageChart repos={report.repos} />
-            </div>
-            <div className="report-detail__chart-card">
-            <h3>⚖️ Concentración de commits (80/20)</h3>
-              <CommitConcentrationChart repos={report.repos} />
-            </div>
-          </>
-        )}
-      </div>
-
-      <div className="report-detail__pagination">
-        <button
-          onClick={() => setPage(1)}
-          disabled={page === 1}
-          className="report-detail__page-btn"
-        >
-          ⬅ Anterior
-        </button>
-        <button
-          onClick={() => setPage(2)}
-          disabled={page === 2}
-          className="report-detail__page-btn"
-        >
-          Siguiente ➡
-        </button>
-      </div>
-
+      {/* Subvistas de análisis */}
+      {page === 1 && <ActividadCharts repos={report.repos} />}
+      {page === 2 && <ComunidadCharts repos={report.repos} />}
+      {page === 3 && <MantenimientoCharts repos={report.repos} />}
+      {page === 4 && <IntegracionCharts repos={report.repos} />}
     </div>
   );
 };
