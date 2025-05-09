@@ -1,52 +1,36 @@
-// src/components/charts/AvgDaysBetweenCommitsChart.jsx
 import Plot from "react-plotly.js";
 
 const AvgDaysBetweenCommitsChart = ({ repos }) => {
-  // Line plots de actividad semanal
-  const commitLines = repos.map((repo) => {
-    const x = repo.activity.commit_activity.map((d) => d.week);
-    const y = repo.activity.commit_activity.map((d) => d.count);
-    return {
-      x,
-      y,
-      mode: "lines+markers",
-      type: "scatter",
-      name: repo.repo.name,
-      line: { shape: "spline" },
-    };
-  });
+  const filtered = repos.filter(
+    (repo) =>
+      repo.advanced_metrics?.avg_days_between_commits !== undefined &&
+      repo.advanced_metrics.avg_days_between_commits !== "N/A"
+  );
 
-  // Línea de promedio teórico (commit cada X días)
-  const avgLines = repos.map((repo) => {
-    const avg = repo.advanced_metrics?.avg_days_between_commits;
-    const x = repo.activity.commit_activity.map((d) => d.week);
-    const y = x.map(() => avg && avg !== "N/A" ? 7 / avg : null); // commits por semana estimados
-    return {
-      x,
-      y,
-      mode: "lines",
-      type: "scatter",
-      name: `${repo.repo.name} (promedio estimado)`,
-      line: {
-        dash: "dot",
-        width: 2,
-        color: "rgba(150,150,150,0.6)"
-      },
-      hoverinfo: "name+y",
-      showlegend: false,
-    };
-  });
+  const names = filtered.map((repo) => repo.repo.name);
+  const values = filtered.map((repo) => repo.advanced_metrics.avg_days_between_commits);
 
   return (
     <Plot
-      data={[...commitLines, ...avgLines]}
+      data={[
+        {
+          x: names,
+          y: values,
+          type: "scatter",
+          mode: "lines+markers+text",
+          text: values.map((val) => `${val} días`),
+          textposition: "top center",
+          line: { shape: "linear" },
+          marker: { color: "#4a3ddf" },
+          name: "Días promedio entre commits",
+        },
+      ]}
       layout={{
-        title: "",
-        xaxis: { title: "Semana" },
-        yaxis: { title: "Commits" },
-        margin: { t: 20, r: 10, l: 50, b: 50 },
-        height: 300,
-        legend: { orientation: "h" }
+        title: "Días promedio entre commits",
+        xaxis: { title: "Repositorio" },
+        yaxis: { title: "Días", rangemode: "tozero" },
+        height: 320,
+        margin: { t: 40 },
       }}
       config={{ displayModeBar: false }}
     />

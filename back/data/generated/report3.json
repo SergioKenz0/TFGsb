@@ -1,0 +1,859 @@
+[
+  {
+    "repo": {
+      "name": "LTX-Video",
+      "owner": "Lightricks",
+      "url": "https://github.com/Lightricks/LTX-Video",
+      "owner_type": "Organization",
+      "owner_location": "Jerusalem, Israel",
+      "created_at": "2024-11-20T20:06:28Z",
+      "first_commit": "2024-11-22T13:53:46Z",
+      "last_commit": "2025-05-07T10:03:45Z"
+    },
+    "metrics": {
+      "stars": 4197,
+      "forks": 343,
+      "watchers": 53,
+      "disk_usage_kb": 158,
+      "open_issues": 130,
+      "closed_issues": 81,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 32,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 9,
+        "active": 1,
+        "by_commit": [
+          {
+            "login": "yoavhacohen",
+            "commits": 54
+          },
+          {
+            "login": "SapirW",
+            "commits": 4
+          },
+          {
+            "login": "fofr",
+            "commits": 2
+          },
+          {
+            "login": "ybitterman",
+            "commits": 1
+          },
+          {
+            "login": "sayakpaul",
+            "commits": 1
+          },
+          {
+            "login": "hvaara",
+            "commits": 1
+          },
+          {
+            "login": "belkakari",
+            "commits": 1
+          },
+          {
+            "login": "ofirbb",
+            "commits": 1
+          },
+          {
+            "login": "kvochko",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 167,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-11-18",
+          "count": 7
+        },
+        {
+          "week": "2024-11-25",
+          "count": 1
+        },
+        {
+          "week": "2024-12-02",
+          "count": 1
+        },
+        {
+          "week": "2024-12-09",
+          "count": 4
+        },
+        {
+          "week": "2024-12-16",
+          "count": 14
+        },
+        {
+          "week": "2024-12-30",
+          "count": 2
+        },
+        {
+          "week": "2025-02-10",
+          "count": 21
+        },
+        {
+          "week": "2025-03-03",
+          "count": 6
+        },
+        {
+          "week": "2025-04-14",
+          "count": 2
+        },
+        {
+          "week": "2025-04-21",
+          "count": 2
+        },
+        {
+          "week": "2025-05-05",
+          "count": 6
+        }
+      ],
+      "active_lifespan_days": 168
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 100.0
+        }
+      ]
+    },
+    "license": "Apache License 2.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 2.4,
+      "issue_closure_rate": 62.31,
+      "avg_response_time_issues": 5.54,
+      "avg_merge_time": 2.38,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "element-plus",
+      "owner": "element-plus",
+      "url": "https://github.com/element-plus/element-plus",
+      "owner_type": "Organization",
+      "owner_location": "China",
+      "created_at": "2020-07-21T06:51:19Z",
+      "first_commit": "2025-03-30T05:59:28Z",
+      "last_commit": "2025-05-09T07:47:17Z"
+    },
+    "metrics": {
+      "stars": 25755,
+      "forks": 18390,
+      "watchers": 211,
+      "disk_usage_kb": 767817,
+      "open_issues": 7547,
+      "closed_issues": 6007,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 8156,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 26,
+        "active": 5,
+        "by_commit": [
+          {
+            "login": "Dsaquel",
+            "commits": 14
+          },
+          {
+            "login": "warmthsea",
+            "commits": 12
+          },
+          {
+            "login": "betavs",
+            "commits": 12
+          },
+          {
+            "login": "btea",
+            "commits": 11
+          },
+          {
+            "login": "w2xi",
+            "commits": 10
+          },
+          {
+            "login": "kooriookami",
+            "commits": 5
+          },
+          {
+            "login": "makedopamine",
+            "commits": 5
+          },
+          {
+            "login": "zzjiaxiang",
+            "commits": 4
+          },
+          {
+            "login": "DDDDD12138",
+            "commits": 4
+          },
+          {
+            "login": "element-bot",
+            "commits": 3
+          },
+          {
+            "login": "comp-squirrel",
+            "commits": 3
+          },
+          {
+            "login": "Liao-js",
+            "commits": 2
+          },
+          {
+            "login": "cn-xufei",
+            "commits": 2
+          },
+          {
+            "login": "zhixiaotong",
+            "commits": 1
+          },
+          {
+            "login": "xiaowhang",
+            "commits": 1
+          },
+          {
+            "login": "wNing50",
+            "commits": 1
+          },
+          {
+            "login": "xinconan",
+            "commits": 1
+          },
+          {
+            "login": "kaine0923",
+            "commits": 1
+          },
+          {
+            "login": "a92126",
+            "commits": 1
+          },
+          {
+            "login": "YancyZhang30",
+            "commits": 1
+          },
+          {
+            "login": "YiMo1",
+            "commits": 1
+          },
+          {
+            "login": "renovate[bot]",
+            "commits": 1
+          },
+          {
+            "login": "stillgg",
+            "commits": 1
+          },
+          {
+            "login": "0song",
+            "commits": 1
+          },
+          {
+            "login": "mjsong07",
+            "commits": 1
+          },
+          {
+            "login": "HaceraI",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 1753,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-03-24",
+          "count": 2
+        },
+        {
+          "week": "2025-03-31",
+          "count": 16
+        },
+        {
+          "week": "2025-04-07",
+          "count": 13
+        },
+        {
+          "week": "2025-04-14",
+          "count": 13
+        },
+        {
+          "week": "2025-04-21",
+          "count": 28
+        },
+        {
+          "week": "2025-04-28",
+          "count": 14
+        },
+        {
+          "week": "2025-05-05",
+          "count": 14
+        }
+      ],
+      "active_lifespan_days": 42
+    },
+    "languages": {
+      "main": "TypeScript",
+      "breakdown": [
+        {
+          "name": "TypeScript",
+          "percentage": 51.87
+        },
+        {
+          "name": "Vue",
+          "percentage": 47.08
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 0.76
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.25
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.05
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.12,
+      "issue_closure_rate": 79.59,
+      "avg_response_time_issues": 0.03,
+      "avg_merge_time": 1.28,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "2%"
+    }
+  },
+  {
+    "repo": {
+      "name": "ty",
+      "owner": "astral-sh",
+      "url": "https://github.com/astral-sh/ty",
+      "owner_type": "Organization",
+      "owner_location": "United States of America",
+      "created_at": "2025-05-02T16:37:51Z",
+      "first_commit": "2025-05-02T16:37:31Z",
+      "last_commit": "2025-05-09T12:24:18Z"
+    },
+    "metrics": {
+      "stars": 4521,
+      "forks": 30,
+      "watchers": 24,
+      "disk_usage_kb": 194,
+      "open_issues": 229,
+      "closed_issues": 39,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 67,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 8,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "zanieb",
+            "commits": 36
+          },
+          {
+            "login": "MichaReiser",
+            "commits": 15
+          },
+          {
+            "login": "paul-nameless",
+            "commits": 2
+          },
+          {
+            "login": "Gankra",
+            "commits": 2
+          },
+          {
+            "login": "jorenham",
+            "commits": 1
+          },
+          {
+            "login": "charliermarsh",
+            "commits": 1
+          },
+          {
+            "login": "carljm",
+            "commits": 1
+          },
+          {
+            "login": "esadek",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 6,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-28",
+          "count": 3
+        },
+        {
+          "week": "2025-05-05",
+          "count": 56
+        }
+      ],
+      "active_lifespan_days": 7
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 77.79
+        },
+        {
+          "name": "Dockerfile",
+          "percentage": 12.59
+        },
+        {
+          "name": "Shell",
+          "percentage": 9.62
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.03,
+      "issue_closure_rate": 17.03,
+      "avg_response_time_issues": 0.08,
+      "avg_merge_time": 0.02,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "gpui-component",
+      "owner": "longbridge",
+      "url": "https://github.com/longbridge/gpui-component",
+      "owner_type": "Organization",
+      "owner_location": "Singapore",
+      "created_at": "2024-06-13T13:45:39Z",
+      "first_commit": "2025-03-24T07:29:50Z",
+      "last_commit": "2025-05-09T14:55:48Z"
+    },
+    "metrics": {
+      "stars": 1585,
+      "forks": 86,
+      "watchers": 18,
+      "disk_usage_kb": 2995,
+      "open_issues": 115,
+      "closed_issues": 100,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 729,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 12,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "huacnlee",
+            "commits": 68
+          },
+          {
+            "login": "madcodelife",
+            "commits": 18
+          },
+          {
+            "login": "sunli829",
+            "commits": 2
+          },
+          {
+            "login": "dependabot[bot]",
+            "commits": 2
+          },
+          {
+            "login": "ylinwind",
+            "commits": 2
+          },
+          {
+            "login": "JakkuSakura",
+            "commits": 2
+          },
+          {
+            "login": "Losses",
+            "commits": 1
+          },
+          {
+            "login": "zoubingwu",
+            "commits": 1
+          },
+          {
+            "login": "sectore",
+            "commits": 1
+          },
+          {
+            "login": "wangziling",
+            "commits": 1
+          },
+          {
+            "login": "victorhqc",
+            "commits": 1
+          },
+          {
+            "login": "Angelk90",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 330,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-03-24",
+          "count": 18
+        },
+        {
+          "week": "2025-03-31",
+          "count": 20
+        },
+        {
+          "week": "2025-04-07",
+          "count": 4
+        },
+        {
+          "week": "2025-04-14",
+          "count": 22
+        },
+        {
+          "week": "2025-04-21",
+          "count": 14
+        },
+        {
+          "week": "2025-04-28",
+          "count": 11
+        },
+        {
+          "week": "2025-05-05",
+          "count": 11
+        }
+      ],
+      "active_lifespan_days": 42
+    },
+    "languages": {
+      "main": "Rust",
+      "breakdown": [
+        {
+          "name": "Rust",
+          "percentage": 99.65
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.24
+        },
+        {
+          "name": "Nix",
+          "percentage": 0.07
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.03
+        }
+      ]
+    },
+    "license": "Other",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.24,
+      "issue_closure_rate": 86.96,
+      "avg_response_time_issues": 3.35,
+      "avg_merge_time": 0.14,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "owner_type": "User",
+      "owner_location": null,
+      "created_at": "2024-03-11T02:57:34Z",
+      "first_commit": "2024-06-15T09:36:37Z",
+      "last_commit": "2025-05-09T12:56:14Z"
+    },
+    "metrics": {
+      "stars": 28064,
+      "forks": 4132,
+      "watchers": 210,
+      "disk_usage_kb": 530770,
+      "open_issues": 482,
+      "closed_issues": 365,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 148,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 11,
+        "active": 3,
+        "by_commit": [
+          {
+            "login": "harry0703",
+            "commits": 39
+          },
+          {
+            "login": "An\u00f3nimo",
+            "commits": 28
+          },
+          {
+            "login": "yyhhyyyyyy",
+            "commits": 20
+          },
+          {
+            "login": "garylab",
+            "commits": 4
+          },
+          {
+            "login": "iorikingdom",
+            "commits": 2
+          },
+          {
+            "login": "Dreyfi",
+            "commits": 2
+          },
+          {
+            "login": "eren1106",
+            "commits": 1
+          },
+          {
+            "login": "vipinbihari",
+            "commits": 1
+          },
+          {
+            "login": "Felix3322",
+            "commits": 1
+          },
+          {
+            "login": "flingjie",
+            "commits": 1
+          },
+          {
+            "login": "LucasHenriqueDiniz",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 424,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-06-10",
+          "count": 2
+        },
+        {
+          "week": "2024-06-17",
+          "count": 2
+        },
+        {
+          "week": "2024-07-01",
+          "count": 4
+        },
+        {
+          "week": "2024-07-08",
+          "count": 2
+        },
+        {
+          "week": "2024-07-15",
+          "count": 10
+        },
+        {
+          "week": "2024-07-22",
+          "count": 17
+        },
+        {
+          "week": "2024-08-26",
+          "count": 1
+        },
+        {
+          "week": "2024-09-23",
+          "count": 2
+        },
+        {
+          "week": "2024-09-30",
+          "count": 1
+        },
+        {
+          "week": "2024-10-07",
+          "count": 1
+        },
+        {
+          "week": "2024-11-18",
+          "count": 4
+        },
+        {
+          "week": "2024-11-25",
+          "count": 1
+        },
+        {
+          "week": "2024-12-02",
+          "count": 10
+        },
+        {
+          "week": "2024-12-09",
+          "count": 5
+        },
+        {
+          "week": "2024-12-23",
+          "count": 1
+        },
+        {
+          "week": "2025-01-06",
+          "count": 1
+        },
+        {
+          "week": "2025-01-20",
+          "count": 1
+        },
+        {
+          "week": "2025-01-27",
+          "count": 1
+        },
+        {
+          "week": "2025-02-03",
+          "count": 5
+        },
+        {
+          "week": "2025-02-10",
+          "count": 1
+        },
+        {
+          "week": "2025-02-24",
+          "count": 1
+        },
+        {
+          "week": "2025-03-03",
+          "count": 3
+        },
+        {
+          "week": "2025-03-17",
+          "count": 2
+        },
+        {
+          "week": "2025-03-24",
+          "count": 1
+        },
+        {
+          "week": "2025-04-21",
+          "count": 1
+        },
+        {
+          "week": "2025-04-28",
+          "count": 1
+        },
+        {
+          "week": "2025-05-05",
+          "count": 19
+        }
+      ],
+      "active_lifespan_days": 329
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 95.11
+        },
+        {
+          "name": "TypeScript",
+          "percentage": 3.48
+        },
+        {
+          "name": "Dockerfile",
+          "percentage": 0.8
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.37
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.23
+        }
+      ]
+    },
+    "license": "MIT License",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 3.11,
+      "issue_closure_rate": 75.73,
+      "avg_response_time_issues": 10.88,
+      "avg_merge_time": 7.78,
+      "external_contributors_ratio": 90.91,
+      "test_coverage": "N/A"
+    }
+  }
+]

@@ -10,7 +10,7 @@ GENERATED_DIR = "data/generated"
 app = Flask(__name__)
 CORS(app)
 
-# Cargar todos los reports
+# Cargar todos los reports (preloaded + generados)
 def cargar_reports():
     reports = []
     for carpeta in [PRELOADED_DIR, GENERATED_DIR]:
@@ -22,7 +22,7 @@ def cargar_reports():
                 try:
                     with open(path, 'r') as f:
                         data = json.load(f)
-                        if isinstance(data, list):  # ahora es una lista de análisis por repo
+                        if isinstance(data, list):  # debe ser lista de análisis
                             reports.append({
                                 "filename": nombre,
                                 "repos": data
@@ -35,6 +35,21 @@ def cargar_reports():
                     print(f"⚠️ Error al cargar {nombre}: {e}")
     return reports
 
+# Buscar el siguiente índice libre para no sobrescribir reportes
+def obtener_siguiente_indice():
+    usados = set()
+    for nombre in os.listdir(PRELOADED_DIR) + os.listdir(GENERATED_DIR):
+        if nombre.startswith("report") and nombre.endswith(".json"):
+            try:
+                num = int(nombre.replace("report", "").replace(".json", ""))
+                usados.add(num)
+            except ValueError:
+                continue
+    i = 1
+    while i in usados:
+        i += 1
+    return i
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     try:
@@ -45,10 +60,7 @@ def analyze():
         if len(urls) > 5:
             return jsonify({"error": "Límite de 5 repositorios por análisis"}), 400
 
-        existing_reports = [
-            f for f in os.listdir(GENERATED_DIR) if f.startswith("report") and f.endswith(".json")
-        ]
-        next_index = len(existing_reports) + len(os.listdir(PRELOADED_DIR)) + 1
+        next_index = obtener_siguiente_indice()
         output_filename = f"report{next_index}.json"
         output_path = os.path.join(GENERATED_DIR, output_filename)
 
@@ -83,6 +95,5 @@ def get_reports():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)

@@ -1,13 +1,20 @@
 import ClosedIssuesPercentageChart from "./charts/ClosedIssuesPercentageChart";
+import IssueClosureRateChart from "./charts/IssueClosureRateChart";
 
-const MantenimientoCharts = ({ repos }) => (
-  <div className="report-detail__grid">
-    <div className="report-detail__chart-card">
-      <h3>✅ % de issues cerradas</h3>
-      <ClosedIssuesPercentageChart repos={repos} />
+const MantenimientoCharts = ({ repos }) => {
+  return (
+    <div className="report-detail__grid">
+      <div className="report-detail__chart-card">
+        <h3>✅ % de issues cerradas</h3>
+        <ClosedIssuesPercentageChart repos={repos} />
+      </div>
+
+      <div className="report-detail__chart-card">
+        <h3>📉 Tasa de cierre de issues</h3>
+        <IssueClosureRateChart repos={repos} />
+      </div>
     </div>
-    {/* Aquí se integrará avg_response_time_issues cuando el gráfico esté listo */}
-  </div>
-);
+  );
+};
 
 export default MantenimientoCharts;

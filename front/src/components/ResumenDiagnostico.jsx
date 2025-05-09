@@ -1,10 +1,13 @@
 import React from 'react';
 import '../assets/styles/components/_resumen-diagnostico.scss';
 
+// Nuevos charts visuales para resumen
+import PopularityChart from './charts/PopularityChart';
+import LanguagesBreakdownChart from './charts/LanguagesBreakdownChart';
+
 const ResumenDiagnostico = ({ repos }) => {
   if (!repos) return <p>Cargando análisis...</p>;
 
-  // Procesamiento por dimensión
   const actividad = [];
   const mantenimiento = [];
   const comunidad = [];
@@ -13,7 +16,6 @@ const ResumenDiagnostico = ({ repos }) => {
   repos.forEach((r) => {
     const { repo, advanced_metrics, metrics } = r;
 
-    // Actividad
     const dias = advanced_metrics.avg_days_between_commits;
     let act = '';
     if (dias !== 'N/A') {
@@ -23,7 +25,6 @@ const ResumenDiagnostico = ({ repos }) => {
     }
     actividad.push({ name: repo.name, valor: act });
 
-    // Mantenimiento
     const tasa = advanced_metrics.issue_closure_rate;
     let mant = '';
     if (tasa !== 'N/A') {
@@ -33,7 +34,6 @@ const ResumenDiagnostico = ({ repos }) => {
     }
     mantenimiento.push({ name: repo.name, valor: mant });
 
-    // Comunidad
     const contribs = metrics.contributors.total;
     const ext_ratio = advanced_metrics.external_contributors_ratio;
     let comm = '';
@@ -44,7 +44,6 @@ const ResumenDiagnostico = ({ repos }) => {
     }
     comunidad.push({ name: repo.name, valor: comm });
 
-    // Pull requests
     const merge = advanced_metrics.avg_merge_time;
     let prs = '';
     if (merge !== 'N/A') {
@@ -88,6 +87,19 @@ const ResumenDiagnostico = ({ repos }) => {
   return (
     <div className="resumen-diagnostico">
       <h2 className="resumen-diagnostico__header">Resumen de Análisis</h2>
+
+      {/* Nuevos gráficos visuales arriba */}
+      <div className="resumen-diagnostico__visuales">
+        <div className="resumen-diagnostico__chart">
+          <h3>📊 Popularidad</h3>
+          <PopularityChart repos={repos} />
+        </div>
+        <div className="resumen-diagnostico__chart">
+          <h3>🎨 Distribución de Lenguajes</h3>
+          <LanguagesBreakdownChart repos={repos} />
+        </div>
+      </div>
+
       <div className="resumen-diagnostico__grid">
         {renderSection(
           'Actividad (frecuencia de commits)',

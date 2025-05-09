@@ -1,0 +1,933 @@
+[
+  {
+    "repo": {
+      "name": "weekly",
+      "owner": "ruanyf",
+      "url": "https://github.com/ruanyf/weekly",
+      "owner_type": "User",
+      "owner_location": "Shanghai, China",
+      "created_at": "2018-10-13T12:36:07Z",
+      "first_commit": "2024-04-11T23:43:40Z",
+      "last_commit": "2025-05-09T00:15:48Z"
+    },
+    "metrics": {
+      "stars": 60668,
+      "forks": 3319,
+      "watchers": 2676,
+      "disk_usage_kb": 6659,
+      "open_issues": 6395,
+      "closed_issues": 992,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 131,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 11,
+        "active": 1,
+        "by_commit": [
+          {
+            "login": "ruanyf",
+            "commits": 84
+          },
+          {
+            "login": "An\u00f3nimo",
+            "commits": 3
+          },
+          {
+            "login": "George551556",
+            "commits": 3
+          },
+          {
+            "login": "jeff-fe",
+            "commits": 2
+          },
+          {
+            "login": "lz-lee",
+            "commits": 2
+          },
+          {
+            "login": "alanqq0624",
+            "commits": 1
+          },
+          {
+            "login": "itaober",
+            "commits": 1
+          },
+          {
+            "login": "xiaop1ng",
+            "commits": 1
+          },
+          {
+            "login": "FutaoSmile",
+            "commits": 1
+          },
+          {
+            "login": "bigshans",
+            "commits": 1
+          },
+          {
+            "login": "JeffersonHuang",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 2399,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2024-04-08",
+          "count": 1
+        },
+        {
+          "week": "2024-04-15",
+          "count": 2
+        },
+        {
+          "week": "2024-04-22",
+          "count": 1
+        },
+        {
+          "week": "2024-05-06",
+          "count": 1
+        },
+        {
+          "week": "2024-05-13",
+          "count": 3
+        },
+        {
+          "week": "2024-05-20",
+          "count": 3
+        },
+        {
+          "week": "2024-05-27",
+          "count": 1
+        },
+        {
+          "week": "2024-06-03",
+          "count": 5
+        },
+        {
+          "week": "2024-06-10",
+          "count": 1
+        },
+        {
+          "week": "2024-06-17",
+          "count": 4
+        },
+        {
+          "week": "2024-06-24",
+          "count": 5
+        },
+        {
+          "week": "2024-07-01",
+          "count": 1
+        },
+        {
+          "week": "2024-07-08",
+          "count": 1
+        },
+        {
+          "week": "2024-07-15",
+          "count": 1
+        },
+        {
+          "week": "2024-07-22",
+          "count": 2
+        },
+        {
+          "week": "2024-07-29",
+          "count": 1
+        },
+        {
+          "week": "2024-08-05",
+          "count": 1
+        },
+        {
+          "week": "2024-08-12",
+          "count": 3
+        },
+        {
+          "week": "2024-08-19",
+          "count": 1
+        },
+        {
+          "week": "2024-08-26",
+          "count": 1
+        },
+        {
+          "week": "2024-09-02",
+          "count": 2
+        },
+        {
+          "week": "2024-09-09",
+          "count": 4
+        },
+        {
+          "week": "2024-09-16",
+          "count": 4
+        },
+        {
+          "week": "2024-09-23",
+          "count": 3
+        },
+        {
+          "week": "2024-10-07",
+          "count": 1
+        },
+        {
+          "week": "2024-10-14",
+          "count": 3
+        },
+        {
+          "week": "2024-10-21",
+          "count": 1
+        },
+        {
+          "week": "2024-10-28",
+          "count": 2
+        },
+        {
+          "week": "2024-11-04",
+          "count": 1
+        },
+        {
+          "week": "2024-11-11",
+          "count": 1
+        },
+        {
+          "week": "2024-11-18",
+          "count": 4
+        },
+        {
+          "week": "2024-11-25",
+          "count": 1
+        },
+        {
+          "week": "2024-12-02",
+          "count": 1
+        },
+        {
+          "week": "2024-12-09",
+          "count": 3
+        },
+        {
+          "week": "2024-12-16",
+          "count": 3
+        },
+        {
+          "week": "2024-12-23",
+          "count": 2
+        },
+        {
+          "week": "2024-12-30",
+          "count": 1
+        },
+        {
+          "week": "2025-01-06",
+          "count": 2
+        },
+        {
+          "week": "2025-01-13",
+          "count": 1
+        },
+        {
+          "week": "2025-01-20",
+          "count": 1
+        },
+        {
+          "week": "2025-02-03",
+          "count": 1
+        },
+        {
+          "week": "2025-02-10",
+          "count": 1
+        },
+        {
+          "week": "2025-02-17",
+          "count": 2
+        },
+        {
+          "week": "2025-02-24",
+          "count": 1
+        },
+        {
+          "week": "2025-03-03",
+          "count": 4
+        },
+        {
+          "week": "2025-03-10",
+          "count": 1
+        },
+        {
+          "week": "2025-03-17",
+          "count": 1
+        },
+        {
+          "week": "2025-03-24",
+          "count": 1
+        },
+        {
+          "week": "2025-04-07",
+          "count": 3
+        },
+        {
+          "week": "2025-04-14",
+          "count": 1
+        },
+        {
+          "week": "2025-04-21",
+          "count": 3
+        },
+        {
+          "week": "2025-05-05",
+          "count": 1
+        }
+      ],
+      "active_lifespan_days": 392
+    },
+    "languages": {
+      "main": "Desconocido",
+      "breakdown": []
+    },
+    "license": "Sin licencia",
+    "best_practices": {
+      "readme": true,
+      "license": false,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 3.53,
+      "issue_closure_rate": 15.51,
+      "avg_response_time_issues": 0.11,
+      "avg_merge_time": 0.48,
+      "external_contributors_ratio": 90.91,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "NeMo",
+      "owner": "NVIDIA",
+      "url": "https://github.com/NVIDIA/NeMo",
+      "owner_type": "Organization",
+      "owner_location": "2788 San Tomas Expressway, Santa Clara, CA, 95051",
+      "created_at": "2019-08-05T20:16:42Z",
+      "first_commit": "2025-04-29T23:15:09Z",
+      "last_commit": "2025-05-09T16:32:50Z"
+    },
+    "metrics": {
+      "stars": 14123,
+      "forks": 2829,
+      "watchers": 229,
+      "disk_usage_kb": 462965,
+      "open_issues": 2532,
+      "closed_issues": 2491,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 10229,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 38,
+        "active": 1,
+        "by_commit": [
+          {
+            "login": "ko3n1g",
+            "commits": 35
+          },
+          {
+            "login": "akoumpa",
+            "commits": 6
+          },
+          {
+            "login": "chtruong814",
+            "commits": 5
+          },
+          {
+            "login": "pthombre",
+            "commits": 3
+          },
+          {
+            "login": "erastorgueva-nv",
+            "commits": 3
+          },
+          {
+            "login": "yaoyu-33",
+            "commits": 3
+          },
+          {
+            "login": "guyueh1",
+            "commits": 3
+          },
+          {
+            "login": "monica-sekoyan",
+            "commits": 3
+          },
+          {
+            "login": "anteju",
+            "commits": 3
+          },
+          {
+            "login": "janekl",
+            "commits": 2
+          },
+          {
+            "login": "youngeunkwon0405",
+            "commits": 2
+          },
+          {
+            "login": "suiyoubi",
+            "commits": 2
+          },
+          {
+            "login": "nitin9252",
+            "commits": 2
+          },
+          {
+            "login": "erhoo82",
+            "commits": 2
+          },
+          {
+            "login": "racoiaws",
+            "commits": 2
+          },
+          {
+            "login": "yuanzhedong",
+            "commits": 2
+          },
+          {
+            "login": "ashors1",
+            "commits": 1
+          },
+          {
+            "login": "JRD971000",
+            "commits": 1
+          },
+          {
+            "login": "github-actions[bot]",
+            "commits": 1
+          },
+          {
+            "login": "f14-bertolotti",
+            "commits": 1
+          },
+          {
+            "login": "bernardhan33",
+            "commits": 1
+          },
+          {
+            "login": "ZhiyuLi-Nvidia",
+            "commits": 1
+          },
+          {
+            "login": "Victor49152",
+            "commits": 1
+          },
+          {
+            "login": "cspades",
+            "commits": 1
+          },
+          {
+            "login": "ananthsub",
+            "commits": 1
+          },
+          {
+            "login": "tango4j",
+            "commits": 1
+          },
+          {
+            "login": "dimapihtar",
+            "commits": 1
+          },
+          {
+            "login": "nasretdinovr",
+            "commits": 1
+          },
+          {
+            "login": "ssh-meister",
+            "commits": 1
+          },
+          {
+            "login": "stevehuang52",
+            "commits": 1
+          },
+          {
+            "login": "oyilmaz-nvidia",
+            "commits": 1
+          },
+          {
+            "login": "xrennvidia",
+            "commits": 1
+          },
+          {
+            "login": "shaltielshmid",
+            "commits": 1
+          },
+          {
+            "login": "malay-nagda",
+            "commits": 1
+          },
+          {
+            "login": "michal2409",
+            "commits": 1
+          },
+          {
+            "login": "BoxiangW",
+            "commits": 1
+          },
+          {
+            "login": "eagle705",
+            "commits": 1
+          },
+          {
+            "login": "pzelasko",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 2103,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-28",
+          "count": 36
+        },
+        {
+          "week": "2025-05-05",
+          "count": 64
+        }
+      ],
+      "active_lifespan_days": 7
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 78.17
+        },
+        {
+          "name": "Jupyter Notebook",
+          "percentage": 20.88
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.85
+        },
+        {
+          "name": "C++",
+          "percentage": 0.08
+        },
+        {
+          "name": "Cuda",
+          "percentage": 0.02
+        }
+      ]
+    },
+    "license": "Apache License 2.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.0,
+      "issue_closure_rate": 98.38,
+      "avg_response_time_issues": 4.8,
+      "avg_merge_time": 0.58,
+      "external_contributors_ratio": 92.11,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "kubectl-ai",
+      "owner": "GoogleCloudPlatform",
+      "url": "https://github.com/GoogleCloudPlatform/kubectl-ai",
+      "owner_type": "Organization",
+      "owner_location": null,
+      "created_at": "2025-01-20T18:07:16Z",
+      "first_commit": "2025-03-20T19:04:35Z",
+      "last_commit": "2025-05-09T18:24:35Z"
+    },
+    "metrics": {
+      "stars": 4315,
+      "forks": 292,
+      "watchers": 29,
+      "disk_usage_kb": 3525,
+      "open_issues": 43,
+      "closed_issues": 15,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 155,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 23,
+        "active": 2,
+        "by_commit": [
+          {
+            "login": "justinsb",
+            "commits": 37
+          },
+          {
+            "login": "droot",
+            "commits": 20
+          },
+          {
+            "login": "janetkuo",
+            "commits": 8
+          },
+          {
+            "login": "hakman",
+            "commits": 6
+          },
+          {
+            "login": "tuannvm",
+            "commits": 3
+          },
+          {
+            "login": "mattn",
+            "commits": 3
+          },
+          {
+            "login": "LinPr",
+            "commits": 2
+          },
+          {
+            "login": "yumosx",
+            "commits": 2
+          },
+          {
+            "login": "zvdy",
+            "commits": 2
+          },
+          {
+            "login": "selimacerbas",
+            "commits": 2
+          },
+          {
+            "login": "cwrau",
+            "commits": 2
+          },
+          {
+            "login": "sakajunquality",
+            "commits": 2
+          },
+          {
+            "login": "anyoptional",
+            "commits": 1
+          },
+          {
+            "login": "j796160836",
+            "commits": 1
+          },
+          {
+            "login": "seunggihong",
+            "commits": 1
+          },
+          {
+            "login": "Azathoth-X",
+            "commits": 1
+          },
+          {
+            "login": "sadikkuzu",
+            "commits": 1
+          },
+          {
+            "login": "gaga5lala",
+            "commits": 1
+          },
+          {
+            "login": "sinwoobang",
+            "commits": 1
+          },
+          {
+            "login": "mschneider82",
+            "commits": 1
+          },
+          {
+            "login": "DoctorLai",
+            "commits": 1
+          },
+          {
+            "login": "zchee",
+            "commits": 1
+          },
+          {
+            "login": "dependabot[bot]",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 109,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-03-17",
+          "count": 13
+        },
+        {
+          "week": "2025-03-24",
+          "count": 12
+        },
+        {
+          "week": "2025-03-31",
+          "count": 2
+        },
+        {
+          "week": "2025-04-07",
+          "count": 4
+        },
+        {
+          "week": "2025-04-14",
+          "count": 23
+        },
+        {
+          "week": "2025-04-21",
+          "count": 8
+        },
+        {
+          "week": "2025-04-28",
+          "count": 10
+        },
+        {
+          "week": "2025-05-05",
+          "count": 28
+        }
+      ],
+      "active_lifespan_days": 49
+    },
+    "languages": {
+      "main": "Go",
+      "breakdown": [
+        {
+          "name": "Go",
+          "percentage": 84.02
+        },
+        {
+          "name": "Shell",
+          "percentage": 15.21
+        },
+        {
+          "name": "Dockerfile",
+          "percentage": 0.46
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.25
+        },
+        {
+          "name": "Makefile",
+          "percentage": 0.07
+        }
+      ]
+    },
+    "license": "Apache License 2.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.26,
+      "issue_closure_rate": 34.88,
+      "avg_response_time_issues": 3.39,
+      "avg_merge_time": 0.22,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  },
+  {
+    "repo": {
+      "name": "ultralytics",
+      "owner": "ultralytics",
+      "url": "https://github.com/ultralytics/ultralytics",
+      "owner_type": "Organization",
+      "owner_location": "United States of America",
+      "created_at": "2022-09-11T16:39:45Z",
+      "first_commit": "2025-04-22T22:12:53Z",
+      "last_commit": "2025-05-09T11:56:56Z"
+    },
+    "metrics": {
+      "stars": 40453,
+      "forks": 7835,
+      "watchers": 197,
+      "disk_usage_kb": 33107,
+      "open_issues": 11046,
+      "closed_issues": 10344,
+      "branches": "N/A",
+      "pull_requests": {
+        "total": 4219,
+        "open": "N/A",
+        "closed": "N/A"
+      },
+      "contributors": {
+        "total": 21,
+        "active": 4,
+        "by_commit": [
+          {
+            "login": "glenn-jocher",
+            "commits": 30
+          },
+          {
+            "login": "Y-T-G",
+            "commits": 18
+          },
+          {
+            "login": "RizwanMunawar",
+            "commits": 17
+          },
+          {
+            "login": "Laughing-q",
+            "commits": 12
+          },
+          {
+            "login": "lakshanthad",
+            "commits": 5
+          },
+          {
+            "login": "dependabot[bot]",
+            "commits": 2
+          },
+          {
+            "login": "pow3rpi",
+            "commits": 2
+          },
+          {
+            "login": "dianyo",
+            "commits": 1
+          },
+          {
+            "login": "kaanrkaraman",
+            "commits": 1
+          },
+          {
+            "login": "erfan-zekri",
+            "commits": 1
+          },
+          {
+            "login": "ambitious-octopus",
+            "commits": 1
+          },
+          {
+            "login": "oDestroyeRo",
+            "commits": 1
+          },
+          {
+            "login": "rromanchuk",
+            "commits": 1
+          },
+          {
+            "login": "picsalex",
+            "commits": 1
+          },
+          {
+            "login": "lwalejko",
+            "commits": 1
+          },
+          {
+            "login": "artzuros",
+            "commits": 1
+          },
+          {
+            "login": "SHOscarChen",
+            "commits": 1
+          },
+          {
+            "login": "nikenake1",
+            "commits": 1
+          },
+          {
+            "login": "sidekickr",
+            "commits": 1
+          },
+          {
+            "login": "seungjlee",
+            "commits": 1
+          },
+          {
+            "login": "SimoneCaldarella",
+            "commits": 1
+          }
+        ]
+      }
+    },
+    "activity": {
+      "lifespan_days": 970,
+      "inactive_for_days": "N/A",
+      "commit_activity": [
+        {
+          "week": "2025-04-21",
+          "count": 43
+        },
+        {
+          "week": "2025-04-28",
+          "count": 34
+        },
+        {
+          "week": "2025-05-05",
+          "count": 23
+        }
+      ],
+      "active_lifespan_days": 14
+    },
+    "languages": {
+      "main": "Python",
+      "breakdown": [
+        {
+          "name": "Python",
+          "percentage": 99.5
+        },
+        {
+          "name": "Shell",
+          "percentage": 0.19
+        },
+        {
+          "name": "HTML",
+          "percentage": 0.16
+        },
+        {
+          "name": "Dockerfile",
+          "percentage": 0.15
+        }
+      ]
+    },
+    "license": "GNU Affero General Public License v3.0",
+    "best_practices": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_templates": false,
+      "pull_request_template": false
+    },
+    "advanced_metrics": {
+      "avg_days_between_commits": 0.01,
+      "issue_closure_rate": 93.64,
+      "avg_response_time_issues": 0.0,
+      "avg_merge_time": 0.64,
+      "external_contributors_ratio": 100.0,
+      "test_coverage": "N/A"
+    }
+  }
+]
