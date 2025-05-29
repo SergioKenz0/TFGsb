@@ -1,34 +1,57 @@
 import Plot from "react-plotly.js";
 
 const OwnerTypeByLocationChart = ({ repos }) => {
-  const locations = {};
+  const rawLocations = {};
 
   repos.forEach((repo) => {
     const location = repo.repo.owner_location || "Desconocida";
     const type = repo.repo.owner_type || "Desconocido";
 
-    if (!locations[location]) {
-      locations[location] = { User: 0, Organization: 0 };
+    if (!rawLocations[location]) {
+      rawLocations[location] = { User: 0, Organization: 0 };
     }
-    locations[location][type] += 1;
+    rawLocations[location][type] += 1;
   });
 
-  const locationNames = Object.keys(locations);
+  // Paso 1: convertir a array y ordenar por total
+  const sorted = Object.entries(rawLocations)
+    .map(([loc, counts]) => ({
+      location: loc,
+      User: counts.User || 0,
+      Organization: counts.Organization || 0,
+      total: (counts.User || 0) + (counts.Organization || 0),
+    }))
+    .sort((a, b) => b.total - a.total);
+
+  const top = sorted.slice(0, 5);
+  const rest = sorted.slice(5);
+
+  if (rest.length > 0) {
+    const otros = rest.reduce(
+      (acc, loc) => {
+        acc.User += loc.User;
+        acc.Organization += loc.Organization;
+        return acc;
+      },
+      { location: "Otros", User: 0, Organization: 0 }
+    );
+    top.push(otros);
+  }
 
   return (
     <Plot
       data={[
         {
-          y: locationNames,
-          x: locationNames.map((loc) => locations[loc].User || 0),
+          y: top.map((l) => l.location),
+          x: top.map((l) => l.User),
           name: "User",
           type: "bar",
           orientation: "h",
           marker: { color: "#4a3ddf" },
         },
         {
-          y: locationNames,
-          x: locationNames.map((loc) => locations[loc].Organization || 0),
+          y: top.map((l) => l.location),
+          x: top.map((l) => l.Organization),
           name: "Organization",
           type: "bar",
           orientation: "h",
@@ -42,7 +65,7 @@ const OwnerTypeByLocationChart = ({ repos }) => {
         yaxis: { title: "Ubicación" },
         height: 300,
         legend: {
-          x: 1.05, // posición derecha
+          x: 1.05,
           y: 1,
           orientation: "v",
         },

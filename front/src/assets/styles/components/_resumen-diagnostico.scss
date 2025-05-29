@@ -14,6 +14,23 @@
     color: $text-dark;
   }
 
+  &__nombres {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag-repo {
+    display: inline-block;
+    background-color: $gray-light;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: $text-dark;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
   &__visuales {
     display: flex;
     flex-wrap: wrap;
@@ -122,4 +139,68 @@
       }
     }
   }
+}
+
+.circulo {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+
+  &--verde {
+    background-color: #4caf50;
+  }
+
+  &--ambar {
+    background-color: #ffc107;
+  }
+
+  &--rojo {
+    background-color: #f44336;
+  }
+
+  &--gris {
+    background-color: #9e9e9e;
+  }
+}
+
+.resumen-diagnostico__linea {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+
+  .resumen-diagnostico__repo {
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+.resumen-diagnostico__leyenda {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: $text-dark;
+
+  ul {
+    margin-top: 0.4rem;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+
+    .circulo {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .resumen-diagnostico__titulo-grafico {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 }

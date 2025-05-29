@@ -22,13 +22,20 @@ def cargar_reports():
                 try:
                     with open(path, 'r') as f:
                         data = json.load(f)
-                        if isinstance(data, list):  # debe ser lista de análisis
+                        if isinstance(data, list):
                             reports.append({
                                 "filename": nombre,
                                 "repos": data
                             })
+                        elif isinstance(data, dict) and "repos" in data:
+                            reports.append({
+                                "filename": nombre,
+                                "repos": data["repos"],
+                                "fecha": data.get("fecha")
+                            })
                         else:
-                            print(f"⚠️ Formato inválido en {nombre}: se esperaba una lista")
+                            print(f"⚠️ Formato inválido en {nombre}: no se reconoció la estructura")
+
                 except json.JSONDecodeError:
                     print(f"⚠️ Error al parsear {nombre}")
                 except Exception as e:
@@ -55,19 +62,27 @@ def analyze():
     try:
         data = request.get_json()
         urls = data.get('repo_urls')
+        token = data.get('token')
+
         if not urls or not isinstance(urls, list):
             return jsonify({"error": "Debe enviar una lista de URLs"}), 400
-        if len(urls) > 5:
-            return jsonify({"error": "Límite de 5 repositorios por análisis"}), 400
+        if not token or not isinstance(token, str) or not token.strip():
+            return jsonify({"error": "Debe proporcionar un token personal de GitHub"}), 400
+        if len(urls) > 100:
+            return jsonify({"error": "Límite de 100 repositorios por análisis"}), 400
 
         next_index = obtener_siguiente_indice()
         output_filename = f"report{next_index}.json"
         output_path = os.path.join(GENERATED_DIR, output_filename)
 
+        env = os.environ.copy()
+        env["GITHUB_TOKEN"] = token.strip()
+
         result = subprocess.run(
-            ['python3', 'prueba1.py', *urls, output_path],
+            ['python3', 'analyze.py', *urls, output_path],
             capture_output=True,
-            text=True
+            text=True,
+            env=env
         )
 
         if result.stderr:

@@ -12,6 +12,8 @@ import IntegracionCharts from "../components/IntegracionCharts";
 import MiniNavBar from "../components/MiniNavBar";
 import ResumenDiagnostico from "../components/ResumenDiagnostico";
 
+const MAX_REPOS_VISIBLES = 5;
+
 const ReportDetailPage = () => {
   const { id } = useParams();
   const [report, setReport] = useState(null);
@@ -50,11 +52,14 @@ const ReportDetailPage = () => {
       {/* Etiquetas de repos visibles solo en la vista de resumen */}
       {page === 0 && (
         <div className="report-detail__repos">
-          {report.repos.map((r, i) => (
+          {report.repos.slice(0, MAX_REPOS_VISIBLES).map((r, i) => (
             <span key={i} className="report-detail__repo-tag">
               {r.repo.name}
             </span>
           ))}
+          {report.repos.length > MAX_REPOS_VISIBLES && (
+            <span className="report-detail__repo-tag">...</span>
+          )}
         </div>
       )}
 

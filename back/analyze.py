@@ -12,12 +12,12 @@ GITHUB_API_URL = "https://api.github.com/graphql"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 if not GITHUB_TOKEN:
-    print("❌ No se encontró el token de GitHub en las variables de entorno.")
+    print(" No se encontró el token de GitHub en las variables de entorno.")
     sys.exit(1)
 
 HEADERS = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
 
-# === FUNCIONES UTILITARIAS ===
+# === FUNCIONES  BÁSICAS ===
 
 def obtener_owner_repo(url):
     parsed_url = urlparse(url)
@@ -40,6 +40,8 @@ def calcular_dias(fecha1, fecha2):
         return (f2 - f1).days
     except:
         return "N/A"
+
+# === MÉTRICAS  COMPLEJAS ===
 
 def calcular_promedio_dias_entre_commits(fechas_iso):
     fechas = [datetime.fromisoformat(f.replace("Z", "+00:00")) for f in fechas_iso]
@@ -114,13 +116,12 @@ def detectar_cobertura_tests(readme_text):
     if not readme_text:
         return "N/A"
 
-    # Patrones típicos de coverage
     patrones = [
-        r'coverage[\s:-]+(\d{1,3})\s?%',                   # coverage: 90%
-        r'(\d{1,3})\s?%[\s-]*(coverage|cobertura)',       # 92% coverage
-        r'img\.shields\.io.*coverage.*[-/](\d{1,3})%?',   # shields.io badge
-        r'codecov\.io.*badge.*?(\d{1,3})%?',              # codecov badge with %
-        r'coveralls\.io.*badge.*?(\d{1,3})%?'             # coveralls badge with %
+        r'coverage[\\s:-]+(\\d{1,3})\\s?%',
+        r'(\\d{1,3})\\s?%[\\s-]*(coverage|cobertura)',
+        r'img\\.shields\\.io.*coverage.*[-/](\\d{1,3})%?',
+        r'codecov\\.io.*badge.*?(\\d{1,3})%?',
+        r'coveralls\\.io.*badge.*?(\\d{1,3})%?'
     ]
 
     for patron in patrones:
@@ -224,6 +225,8 @@ def obtener_datos_propietario(owner):
         return data["data"]["organization"]["__typename"], data["data"]["organization"].get("location", "Ubicación no disponible")
     else:
         return "Desconocido", "Ubicación no disponible"
+
+# === ANÁLISIS DEL REPOSITORIO ===
 
 def analizar_repo(owner, repo):
     commit_info = obtener_commits(owner, repo)
@@ -333,7 +336,7 @@ if __name__ == "__main__":
     output_file = sys.argv[-1]
 
     if not urls:
-        print("❌ Debes proporcionar al menos una URL.")
+        print(" Debes proporcionar al menos una URL.")
         sys.exit(1)
 
     results = []
@@ -343,9 +346,9 @@ if __name__ == "__main__":
             print(f"🔍 Analizando: {owner}/{repo}")
             results.append(analizar_repo(owner, repo))
         except Exception as e:
-            print(f"❌ Error con {url}: {e}")
+            print(f" Error con {url}: {e}")
 
     with open(output_file, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump({"fecha": datetime.utcnow().isoformat(), "repos": results}, f, indent=2)
 
     print(f"✅ Reporte guardado en {output_file}")

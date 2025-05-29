@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header">
       <Link to="/" className="header__logo">
         <span className="header__logo--github">GitHub</span>
-        <span className="header__logo--repominer">RepoMiner</span>
+        <span className="header__logo--repominer">Miner</span>
       </Link>
       <Link to="/analyze" className="header__button">
         Crear Informe +

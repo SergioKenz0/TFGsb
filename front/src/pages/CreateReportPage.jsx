@@ -2,41 +2,39 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/styles/pages/_create-report-page.scss";
 
+const MAX_REPOS = 100;
+
 const CreateReportPage = () => {
-  const [urls, setUrls] = useState([""]);
+  const [urlText, setUrlText] = useState("");
+  const [token, setToken] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-  const handleChange = (index, value) => {
-    const newUrls = [...urls];
-    newUrls[index] = value;
-    setUrls(newUrls);
-  };
-
-  const handleAddField = () => {
-    if (urls.length < 5) setUrls([...urls, ""]);
-  };
-
-  const handleRemoveField = (index) => {
-    if (urls.length > 1) {
-      const newUrls = urls.filter((_, i) => i !== index);
-      setUrls(newUrls);
-    }
+  const parseUrls = (text) => {
+    return text
+      .split(/[\s,]+/)
+      .map((u) => u.trim())
+      .filter((u) => u !== "");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validUrls = urls.filter((url) => url.trim() !== "");
+    const parsedUrls = parseUrls(urlText);
 
-    if (validUrls.length === 0) {
+    if (parsedUrls.length === 0) {
       setError("Debes introducir al menos una URL.");
       return;
     }
 
-    if (validUrls.length > 5) {
-      setError("Solo puedes analizar hasta 5 repositorios.");
+    if (parsedUrls.length > MAX_REPOS) {
+      setError(`Solo puedes analizar hasta ${MAX_REPOS} repositorios.`);
+      return;
+    }
+
+    if (!token.trim()) {
+      setError("Debes introducir un token personal de GitHub.");
       return;
     }
 
@@ -46,7 +44,10 @@ const CreateReportPage = () => {
       const response = await fetch(`${API_BASE_URL}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ repo_urls: validUrls }),
+        body: JSON.stringify({
+          repo_urls: parsedUrls,
+          token: token.trim()
+        }),
       });
 
       if (!response.ok) {
@@ -65,32 +66,31 @@ const CreateReportPage = () => {
     <div className="create-report">
       <h1>Crea un Informe</h1>
       <form onSubmit={handleSubmit}>
-        {urls.map((url, index) => (
-          <div key={index} className="url-input">
-            <input
-              type="url"
-              placeholder={`Repositorio #${index + 1}`}
-              value={url}
-              onChange={(e) => handleChange(index, e.target.value)}
-              required
-            />
-            {urls.length > 1 && (
-              <button type="button" onClick={() => handleRemoveField(index)}>
-                ✖
-              </button>
-            )}
-          </div>
-        ))}
-        {urls.length < 5 && (
-          <button
-            type="button"
-            className="add-url"
-            onClick={handleAddField}
-            disabled={loading}
-          >
-            + Añadir otro repositorio
-          </button>
-        )}
+        <textarea
+          rows={6}
+          placeholder="Introduce hasta 100 URLs de repositorios GitHub"
+          value={urlText}
+          onChange={(e) => setUrlText(e.target.value)}
+          className="urls-textarea"
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Token personal de GitHub (obligatorio)"
+          value={token}
+          onChange={(e) => setToken(e.target.value)}
+          className="token-input"
+          required
+        />
+
+
+        <small className="form-note">
+          ⚠️ El token se usará solo para esta ejecución y no se almacenará.
+        </small>
+
+        <p>{parseUrls(urlText).length} / {MAX_REPOS} repos introducidos</p>
+
         {error && <p className="form-error">{error}</p>}
 
         {loading ? (
