@@ -6,7 +6,6 @@ const MAX_REPOS = 100;
 
 const CreateReportPage = () => {
   const [urlText, setUrlText] = useState("");
-  const [token, setToken] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -33,11 +32,6 @@ const CreateReportPage = () => {
       return;
     }
 
-    if (!token.trim()) {
-      setError("Debes introducir un token personal de GitHub.");
-      return;
-    }
-
     try {
       setLoading(true);
       setError(null);
@@ -45,8 +39,7 @@ const CreateReportPage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          repo_urls: parsedUrls,
-          token: token.trim()
+          repo_urls: parsedUrls
         }),
       });
 
@@ -74,20 +67,6 @@ const CreateReportPage = () => {
           className="urls-textarea"
           required
         />
-
-        <input
-          type="password"
-          placeholder="Token personal de GitHub (obligatorio)"
-          value={token}
-          onChange={(e) => setToken(e.target.value)}
-          className="token-input"
-          required
-        />
-
-
-        <small className="form-note">
-          ⚠️ El token se usará solo para esta ejecución y no se almacenará.
-        </small>
 
         <p>{parseUrls(urlText).length} / {MAX_REPOS} repos introducidos</p>
 

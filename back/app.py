@@ -62,12 +62,9 @@ def analyze():
     try:
         data = request.get_json()
         urls = data.get('repo_urls')
-        token = data.get('token')
 
         if not urls or not isinstance(urls, list):
             return jsonify({"error": "Debe enviar una lista de URLs"}), 400
-        if not token or not isinstance(token, str) or not token.strip():
-            return jsonify({"error": "Debe proporcionar un token personal de GitHub"}), 400
         if len(urls) > 100:
             return jsonify({"error": "Límite de 100 repositorios por análisis"}), 400
 
@@ -76,7 +73,10 @@ def analyze():
         output_path = os.path.join(GENERATED_DIR, output_filename)
 
         env = os.environ.copy()
-        env["GITHUB_TOKEN"] = token.strip()
+
+        # Asegurarnos que GITHUB_TOKEN existe en entorno
+        if "GITHUB_TOKEN" not in env or not env["GITHUB_TOKEN"]:
+            return jsonify({"error": "El token de GitHub no está configurado en el entorno del servidor."}), 500
 
         result = subprocess.run(
             ['python3', 'analyze.py', *urls, output_path],
